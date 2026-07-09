@@ -378,6 +378,77 @@ def run_recall(case_id: str, choose: str | None, custom_text: str | None,
             "violations": violations, "committed": commit and not violations}
 
 
+# ── thesis-audit + 거울 모드 (PRD 4.3) ────────────────────────────
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import verdict_engine as ve  # noqa: E402
+
+# 신규 중대 사실 유형 (논거와 무관하게 알아야 할 것)
+_MATERIAL_TYPES = {"capital_change", "litigation", "business_halt"}
+
+
+def scan_new_material(corp_code: str, buy_date: str, as_of: str, linked_rcps=frozenset()) -> list[dict]:
+    """신규 중대 사실: 중대 유형 ∧ 매수일 이후 제출 ∧ 원장 논거와 미연결(3조건 코드 고정).
+
+    중대 유형 = 증자·CB·감자(capital_change)·소송(litigation)·사업중단(business_halt)
+    ·자기주식 처분(treasury 처분)·최대주주 변경(major_shareholder 변경)."""
+    out = []
+    for e in dc.get_events(corp_code, None, buy_date, as_of, as_of):
+        t, title = e["event_type"], e["title"].strip()
+        material = (t in _MATERIAL_TYPES
+                    or (t == "treasury" and "처분" in title)
+                    or (t == "major_shareholder" and "최대주주변경" in title))
+        if material and e["rcp_no"] not in linked_rcps:   # 원장 논거와 미연결
+            out.append({"date": e["submitted"], "title": title,
+                        "url": f"https://dart.fss.or.kr/dsaf001/main.do?rcpNo={e['rcp_no']}"})
+    return out
+
+
+def build_audit(case_id: str, as_of: str | None = None, mirror: bool = False) -> dict:
+    """원장 논거를 as_of 시점 공시에 대조. 판정은 verdict_engine(결정적). 순수(디스크 읽기만)."""
+    import ledger_store as ls
+    case = _load_case(case_id)
+    corp, buy = case["corp_code"], case["buy_date"]
+    as_of = as_of or case["as_of"]
+    ledger_case = ls.read(case_id)
+    reasons = ledger_case["reasons"] if ledger_case else []
+
+    verdicts = []
+    for r in reasons:
+        v = ve.evaluate(r, corp, as_of)
+        verdicts.append({"reason_id": r["reason_id"], "label": r["label"], "claim": r["claim"],
+                         "status": v["status"], "rule_id": v["rule_id"], "evidence": v["evidence"]})
+    linked = frozenset(r.get("source_rcp_no") for r in reasons if r.get("source_rcp_no"))
+    ctx = {"case_id": case_id, "corp_name": case["corp_name"], "market": case["market"],
+           "buy_date": buy, "as_of": as_of, "days_elapsed": _days(buy, as_of),
+           "verdicts": verdicts, "new_material": scan_new_material(corp, buy, as_of, linked)}
+    if mirror:
+        ctx["return_block"] = build_return_block(case, as_of)
+    return ctx
+
+
+def run_audit(case_id: str, as_of: str | None, mirror: bool, commit: bool) -> dict:
+    """빌드 → 조립(mirror 여부) → 게이트 → 저장 → 원장 audits[] append(commit 시)."""
+    ctx = build_audit(case_id, as_of, mirror)
+    md = rnd.render_mirror(ctx) if mirror else rnd.render_audit(ctx)
+    violations = gate_check(md)
+    out_dir = ROOT / "reports" / case_id
+    out_dir.mkdir(parents=True, exist_ok=True)
+    kind = "mirror" if mirror else "audit"
+    path = out_dir / f"{kind}-{ctx['as_of']}.md"
+    path.write_text(md, encoding="utf-8")
+    if commit and not violations:
+        import ledger_store as ls
+        audit = {"run_at": f"{ctx['as_of']}T00:00:00+09:00", "as_of": ctx["as_of"],
+                 "verdicts": [{"reason_id": v["reason_id"], "status": v["status"],
+                               "rule_id": v["rule_id"] or "RULE-NONE",
+                               "evidence": {k: val for k, val in v["evidence"].items()}}
+                              for v in ctx["verdicts"]],
+                 "new_material_facts": [f["title"] for f in ctx["new_material"]]}
+        ls.append_audit(case_id, audit)
+    return {"path": str(path), "violations": violations, "briefing": md,
+            "committed": commit and not violations}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(prog="run_skill")
     sub = ap.add_subparsers(dest="skill", required=True)
@@ -392,6 +463,11 @@ def main() -> int:
     r.add_argument("--as-of", default=None)
     r.add_argument("--dry-run", action="store_true")
     r.add_argument("--commit", action="store_true")
+    a = sub.add_parser("audit")
+    a.add_argument("--case", required=True)
+    a.add_argument("--as-of", default=None)
+    a.add_argument("--mirror", action="store_true")
+    a.add_argument("--commit", action="store_true")
     args = ap.parse_args()
 
     if args.skill == "timeline":
@@ -411,6 +487,16 @@ def main() -> int:
             print("게이트 위반:", res["violations"])
             return 1
         print(f"[{'커밋됨' if res['committed'] else 'dry-run(미기록)'}] 논거 {len(res['reasons'])}건")
+        return 0
+    if args.skill == "audit":
+        res = run_audit(args.case, args.as_of, args.mirror, args.commit)
+        print(f"저장: {res['path']}")
+        if res["violations"]:
+            print("게이트 위반:")
+            for v in res["violations"]:
+                print(f"  - {v}")
+            return 1
+        print(f"게이트 PASS{' · audits[] 기록됨' if res['committed'] else ''}")
         return 0
     return 2
 

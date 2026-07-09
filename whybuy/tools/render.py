@@ -90,6 +90,72 @@ def render_timeline(ctx: dict) -> str:
     return "\n".join(L) + "\n"
 
 
+_STATUS_KO = {"supported": "유효", "weakened": "약화", "refuted": "반증", "unverifiable": "확인불가"}
+
+
+def verdict_line(v: dict) -> str:
+    """판정 한 줄. 유효/약화/반증은 원문 URL 필수, 확인불가는 부재 사실 문구(게이트 차등 대응)."""
+    ko = _STATUS_KO[v["status"]]
+    e = v.get("evidence", {})
+    if v["status"] == "unverifiable":
+        return f"- {v['label']}: **{ko}** — {e.get('note', '')} (대조를 시도한 공시 기록에 해당 사실 부재)"
+    return (f"- {v['label']}: **{ko}** — {e.get('item', '')} {e.get('compared', '')}, "
+            f"{e.get('delta', '')} [원문]({e.get('url', '')}) (rule: {v['rule_id']})")
+
+
+def _material_lines(facts: list[dict]) -> list[str]:
+    if not facts:
+        return ["- 논거와 무관한 새로운 중대 사실은 없었습니다."]
+    return [f"- {f['date']}: {f['title']} [원문]({f['url']}){ts.gloss(f['title'])}" for f in facts]
+
+
+def render_audit(ctx: dict) -> str:
+    """thesis-audit 브리핑. 판정 + 신규 중대 사실."""
+    L = [f"# {ctx['corp_name']} — 산 이유, 아직 유효한가 ({ctx['as_of']})", ""]
+    L.append(f"> {ts.as_of_notice(ctx['as_of'])}")
+    L.append("")
+    L.append("## 논거 판정")
+    for v in ctx["verdicts"]:
+        L.append(verdict_line(v))
+    L.append("")
+    L.append(f"## {ts.NEW_FACTS_HEADER}")
+    L.extend(_material_lines(ctx["new_material"]))
+    L.append("")
+    L.append(ts.REFUTED_DEFINITION)
+    L.append("")
+    L.append("---")
+    L.append(ts.DISCLAIMER)
+    return "\n".join(L) + "\n"
+
+
+def render_mirror(ctx: dict) -> str:
+    """거울 모드: 과거(기록한 이유) — 현재(수익률+판정+신규사실) — 고정 질문."""
+    L = [f"# {ctx['corp_name']} — 매도 버튼 앞에서", ""]
+    L.append(f"> {ts.as_of_notice(ctx['as_of'])} (매수 후 {ctx['days_elapsed']}일 경과)")
+    L.append("")
+    L.append("## 그때 — 당신이 기록한 매수 이유")
+    for v in ctx["verdicts"]:
+        L.append(f"- {v['label']}: “{v['claim']}”")
+    L.append("")
+    L.append(f"## 지금 — {ctx['as_of']}")
+    r = ctx["return_block"]
+    L.append(f"> 보유 수익률(참고): {pct(r['stock_return_pct'])} · 같은 기간 {market_ko(ctx['market'])} "
+             f"{pct(r['market_return_pct'])} → 시장 대비 {r['market_tag']}")
+    for v in ctx["verdicts"]:
+        L.append(verdict_line(v))
+    L.append("")
+    L.append(f"### {ts.NEW_FACTS_HEADER}")
+    L.extend(_material_lines(ctx["new_material"]))
+    L.append("")
+    L.append(f"## {ts.MIRROR_QUESTION}")
+    L.append("")
+    L.append(ts.REFUTED_DEFINITION)
+    L.append("")
+    L.append("---")
+    L.append(ts.DISCLAIMER)
+    return "\n".join(L) + "\n"
+
+
 def render_recall_confirm(recall: dict, reasons: list[dict]) -> str:
     """reason-recall 선택 확인 브리핑. 사용자가 고른 논거를 사실로 되읽어준다(판정 없음)."""
     L = []
