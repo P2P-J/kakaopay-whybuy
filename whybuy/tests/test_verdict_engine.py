@@ -97,6 +97,22 @@ def test_case003_ktg_dividend_supported():
     assert v["status"] == "supported" and v["rule_id"] == "RULE-DIV-01"
 
 
+def test_earn_baseline_is_prior_year_same_report_not_prev_quarter():
+    # 회귀 잠금(아엔 G4 정합화 규칙): YoY baseline은 '전년 동일 분기'(frmtrm, 동일 보고서)여야 한다.
+    # 카카오 20251Q(105.4B) vs 전년 1분기 20241Q(120.3B) = -12%.
+    # 만약 직전 분기 20244Q(460.2B)를 baseline으로 오용하면 ~-77%가 되어 magnitude가 뒤틀린다.
+    v = ve.evaluate(_reason("earnings_improvement"), KAKAO, "2025-05-14")
+    assert v["evidence"]["compared"] == "20251Q"
+    assert v["evidence"]["baseline"] == "전년 동기(동일 보고서)"
+    assert "-12%" in v["evidence"]["delta"]      # 전년 동기 기준(≠ 직전분기 -77%)
+
+def test_earn_fs_div_is_cfs_fixed():
+    # 연결(CFS) 고정 — 데모 종목은 CFS 존재
+    for corp, asof in [(SAMSUNG, "2025-04-09"), (KAKAO, "2025-05-14")]:
+        v = ve.evaluate(_reason("earnings_improvement"), corp, asof)
+        assert v["evidence"]["fs_div"] == "CFS"
+
+
 # ── 확인불가 (라이브러리 유형) ──
 def test_theme_unverifiable():
     v = ve.evaluate(_reason("theme"), SAMSUNG, "2025-04-09")
