@@ -13,8 +13,10 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 import dart_client as dc  # noqa: E402
 import ledger_store as ls  # noqa: E402
+import compliance_gate as cgate  # noqa: E402
 
 
 def _err(kind: str, message: str, hint: str = "") -> dict:
@@ -68,8 +70,8 @@ def _ledger_write(a):
 
 
 def _gate_check(a):
-    # compliance_gate는 G4에서 구현. 현재는 도구 계약만 노출.
-    return {"status": "pending", "message": "compliance_gate는 G4에서 구현", "text_len": len(a["text"])}
+    violations = cgate.check(a["text"])
+    return {"status": "pass" if not violations else "blocked", "violations": violations}
 
 
 _DATE = {"type": "string", "pattern": r"^\d{4}-\d{2}-\d{2}$"}

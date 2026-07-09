@@ -101,3 +101,14 @@ def test_ledger_write_invalid_rejected():
     bad = {"case_id": "x"}  # 필수 필드 없는 케이스
     r = d("ledger_write", case=bad)
     assert r["error"] == "handler_error"
+
+
+# ── gate_check (G4 배선) ──
+def test_gate_check_pass():
+    ok = ("이 브리핑은 2025-04-09까지 제출된 공시 기준입니다. 영업이익 +32%. "
+          "본 브리핑은 공개된 공시 사실의 정리이며, 특정 종목의 매매를 권유하는 투자자문이 아닙니다.")
+    assert d("gate_check", text=ok)["status"] == "pass"
+
+def test_gate_check_blocked():
+    r = d("gate_check", text="지금 파세요.")
+    assert r["status"] == "blocked" and r["violations"]
