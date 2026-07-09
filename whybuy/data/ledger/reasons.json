@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "cases": [
+    {
+      "case_id": "case-001",
+      "ticker": "005930",
+      "corp_code": "00126380",
+      "corp_name": "삼성전자(주)",
+      "buy_date": "2025-03-25",
+      "is_fixture": true,
+      "context": {
+        "q1_channel": "unspecified",
+        "q3_horizon": "long_term"
+      },
+      "reasons": [
+        {
+          "reason_id": "r1",
+          "type": "earnings_improvement",
+          "label": "실적 개선 기대",
+          "claim": "전사 영업이익이 개선 추세다",
+          "source": "disclosure",
+          "user_text": null,
+          "source_rcp_no": "20250311001085",
+          "selected_at": "2025-03-25"
+        }
+      ],
+      "audits": []
+    },
+    {
+      "case_id": "case-002",
+      "ticker": "035720",
+      "corp_code": "00258801",
+      "corp_name": "카카오",
+      "buy_date": "2025-02-24",
+      "is_fixture": true,
+      "context": {
+        "q1_channel": "unspecified",
+        "q3_horizon": "long_term"
+      },
+      "reasons": [
+        {
+          "reason_id": "r1",
+          "type": "earnings_improvement",
+          "label": "실적 개선 기대",
+          "claim": "전사 영업이익이 개선 추세다",
+          "source": "disclosure",
+          "user_text": null,
+          "source_rcp_no": "20250213800004",
+          "selected_at": "2025-02-24"
+        }
+      ],
+      "audits": []
+    },
+    {
+      "case_id": "case-003",
+      "ticker": "033780",
+      "corp_code": "00244455",
+      "corp_name": "케이티앤지",
+      "buy_date": "2025-03-19",
+      "is_fixture": true,
+      "context": {
+        "q1_channel": "unspecified",
+        "q3_horizon": "long_term"
+      },
+      "reasons": [
+        {
+          "reason_id": "r1",
+          "type": "dividend",
+          "label": "배당 지속·확대 기대",
+          "claim": "배당이 유지 또는 확대된다",
+          "source": "disclosure",
+          "user_text": null,
+          "source_rcp_no": "20250318001223",
+          "selected_at": "2025-03-19"
+        }
+      ],
+      "audits": []
+    }
+  ]
+}

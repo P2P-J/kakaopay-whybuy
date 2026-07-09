@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "whybuy 논거 원장 (reasons.json, PRD 5.1)",
+  "type": "object",
+  "required": ["schema_version", "cases"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "integer", "minimum": 1 },
+    "cases": { "type": "array", "items": { "$ref": "#/definitions/case" } }
+  },
+  "definitions": {
+    "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "rcp_no": { "type": "string", "pattern": "^\\d{14}$" },
+    "rcp_or_null": {
+      "oneOf": [{ "type": "string", "pattern": "^\\d{14}$" }, { "type": "null" }]
+    },
+    "case": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["case_id", "ticker", "corp_code", "corp_name", "buy_date", "is_fixture", "reasons", "audits"],
+      "properties": {
+        "case_id": { "type": "string" },
+        "ticker": { "type": "string", "pattern": "^\\d{6}$" },
+        "corp_code": { "type": "string", "pattern": "^\\d{8}$" },
+        "corp_name": { "type": "string" },
+        "buy_date": { "$ref": "#/definitions/date" },
+        "is_fixture": { "type": "boolean" },
+        "context": { "type": "object" },
+        "reasons": { "type": "array", "items": { "$ref": "#/definitions/reason" } },
+        "audits": { "type": "array", "items": { "$ref": "#/definitions/audit" } }
+      }
+    },
+    "reason": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reason_id", "type", "label", "claim", "source", "source_rcp_no", "selected_at"],
+      "properties": {
+        "reason_id": { "type": "string" },
+        "type": {
+          "enum": ["earnings_improvement", "shareholder_return", "dividend", "growth_order",
+                   "new_business", "theme", "price_anchor", "custom", "unknown"]
+        },
+        "label": { "type": "string" },
+        "claim": { "type": "string" },
+        "source": { "enum": ["disclosure", "library", "custom"] },
+        "user_text": { "type": ["string", "null"] },
+        "source_rcp_no": { "$ref": "#/definitions/rcp_or_null" },
+        "selected_at": { "$ref": "#/definitions/date" }
+      }
+    },
+    "audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["run_at", "as_of", "verdicts", "new_material_facts"],
+      "properties": {
+        "run_at": { "type": "string" },
+        "as_of": { "$ref": "#/definitions/date" },
+        "verdicts": { "type": "array", "items": { "$ref": "#/definitions/verdict" } },
+        "new_material_facts": { "type": "array" }
+      }
+    },
+    "verdict": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reason_id", "status", "rule_id"],
+      "properties": {
+        "reason_id": { "type": "string" },
+        "status": { "enum": ["supported", "weakened", "refuted", "unverifiable"] },
+        "rule_id": { "type": "string" },
+        "evidence": { "type": "object" }
+      }
+    }
+  }
+}
