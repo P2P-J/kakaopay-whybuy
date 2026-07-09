@@ -1,8 +1,263 @@
-"""스킬 파이프라인 진입점 (컨트랙트 명령) — whybuy.
+"""스킬 파이프라인 진입점 (컨트랙트 명령) — whybuy (G6).
 
 파이프라인 규약(0.7 / 부록 D): 각 스킬의 파이프라인 로직은 import 가능한 순수
 함수로 작성하고, argparse CLI는 그 함수를 호출하는 얇은 래퍼일 뿐이다. 테스트는
 CLI를 거치지 않고 함수를 직접 호출한다. (HTTP 래핑 확장이 이 규약에 걸려 있다.)
 
-TODO(G6): timeline 서브커맨드. TODO(G7): recall. TODO(G8): audit. G0 스켈레톤.
+timeline 서브커맨드: PRD 4.1 8단계(수집→분류→노이즈 필터→변하지 않은 것→급변 매칭
+→수익률·시장 대비→템플릿 조립→게이트→저장). MCP 도구 대신 dart_client를 직접 호출한다
+(같은 픽스처 계층). as_of 필터는 dart_client가 강제.
 """
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from datetime import date
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "mcp"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import dart_client as dc  # noqa: E402
+import detect_moves as dmv  # noqa: E402
+import render as rnd  # noqa: E402
+import textstore as ts  # noqa: E402
+import yaml  # noqa: E402
+from classify import classify  # noqa: E402
+from compliance_gate import check as gate_check  # noqa: E402
+
+ROOT = Path(__file__).resolve().parents[1]
+FIX = ROOT / "data" / "fixtures"
+CFG = yaml.safe_load((ROOT / "config.yaml").read_text(encoding="utf-8"))
+
+# 타임라인 본문에 표기하는 화이트리스트 이벤트 (major_shareholder 반복성 지분공시는 접고,
+# 최대주주 실체는 "변하지 않은 것"에서 report_item으로 대조 — 노이즈 필터 PRD 4.1 step4)
+_WHITELIST = {"earnings", "dividend", "treasury", "capital_change", "audit",
+              "litigation", "supply_contract", "facility_investment", "business_halt"}
+_FIXED_ITEMS = [("major_shareholder", "최대주주"), ("audit_opinion", "감사의견"), ("dividend", "배당 정책")]
+
+
+def _load_case(case_id: str) -> dict:
+    cases = json.loads((FIX / "cases.json").read_text(encoding="utf-8"))["cases"]
+    for c in cases:
+        if c["case_id"] == case_id:
+            return c
+    raise KeyError(f"case_id 없음: {case_id}")
+
+
+def _days(a: str, b: str) -> int:
+    return (date.fromisoformat(b) - date.fromisoformat(a)).days
+
+
+def _close_on(rows: list[dict], target: str):
+    """target 이하 마지막 거래일의 (date, close). 휴장일이면 직전 거래일."""
+    prior = [r for r in rows if r["date"] <= target]
+    return (prior[-1]["date"], prior[-1]["close"]) if prior else (None, None)
+
+
+def _won(s):
+    if s in (None, "", "-"):
+        return None
+    try:
+        return int(str(s).replace(",", ""))
+    except ValueError:
+        return None
+
+
+def _money(a) -> str:
+    if a is None:
+        return "?"
+    return f"{a/1e12:.1f}조원" if abs(a) >= 1e12 else f"{a/1e8:.0f}억원"
+
+
+_PERIODS = [f"{y}{q}" for y in ("2026", "2025", "2024") for q in ("4Q", "3Q", "2Q", "1Q")]
+
+
+def _latest_op_fact(corp_code: str, as_of: str):
+    """as_of 이하 최신 '확정' 영업이익 사실(판정 딱지 없이 수치만). 없으면 None."""
+    for p in sorted(_PERIODS, reverse=True):
+        blk = dc.get_financials(corp_code, p[:4], p[4:], as_of)
+        if blk.get("status") != "ok":
+            continue
+        op = next((a for a in blk["accounts"] if a["account_nm"] == "영업이익"), None)
+        if not op:
+            continue
+        th, fr = _won(op["thstrm_amount"]), _won(op["frmtrm_amount"])
+        if fr and fr > 0:
+            yoy = f"전년 동기 대비 {(th - fr) / fr * 100:+.0f}%"
+        elif fr is not None and fr <= 0 and th is not None and th > 0:
+            yoy = "전년 동기 적자에서 흑자 전환"
+        else:
+            yoy = "전년 동기와 비교"
+        return f"최근 확정 영업이익 {_money(th)}, {yoy} ({p}·{blk.get('basis')})"
+    return None
+
+
+# ── 단계별 순수 함수 ──────────────────────────────────────────────
+def collect_changed(corp_code: str, buy_date: str, as_of: str) -> tuple[list, int]:
+    """공시 수집 → 분류 → 노이즈 필터. (화이트리스트 이벤트, 접은 그 외 건수).
+
+    실적(earnings) 이벤트에는 영업이익 사실 수치를 병기한다 — 판정 딱지(유효/반증)는
+    붙이지 않는다(여기는 타임라인, 수치는 사실이라 허용, 딱지는 판단이라 금지)."""
+    changed, other = [], 0
+    op_fact = _latest_op_fact(corp_code, as_of)
+    for d in dc.list_disclosures(corp_code, buy_date, as_of, None, as_of):
+        c = classify(d.get("title", ""), d.get("pblntf_ty"))
+        if c["type"] in _WHITELIST:
+            e = {"date": d["submitted"], "event_type": c["type"],
+                 "title": d["title"].strip(), "url": d["url"]}
+            if c["type"] == "earnings" and op_fact:
+                e["fact"] = op_fact
+            changed.append(e)
+        else:
+            other += 1
+    return changed, other
+
+
+def _repr_fixed(item: str, state: dict):
+    """report_item 상태에서 대표값·근거 rcp 추출."""
+    latest = state["years"][max(state["years"])]
+    if item == "major_shareholder":
+        # 합계(계/합계) 행 제외, '최대주주 본인' 행 우선 선택
+        named = [r for r in latest if r.get("nm") not in ("계", "합계", "-", "", None)]
+        owner = [r for r in named if "본인" in r.get("relate", "")]
+        row = (owner or named or latest)[0]
+        return f"{row.get('nm', '?')} ({row.get('trmend_posesn_stock_qota_rt', '?')}%)", row.get("rcept_no", "")
+    if item == "audit_opinion":
+        row = latest[0]
+        return row.get("adt_opinion", "?"), row.get("rcept_no", "")
+    # dividend
+    row = next((r for r in latest if "주당" in r.get("se", "") and "현금배당금" in r.get("se", "")
+                and r.get("thstrm") not in (None, "-", "")), latest[0])
+    return f"주당 현금배당금 {row.get('thstrm', '?')}원", row.get("rcept_no", "")
+
+
+def collect_unchanged(corp_code: str, buy_date: str, as_of: str) -> list[dict]:
+    """감시 고정 항목(최대주주·감사의견·배당)의 매수 시점 대비 as_of 상태."""
+    out = []
+    for item, label in _FIXED_ITEMS:
+        now = dc.get_report_item(corp_code, item, as_of)
+        if now.get("status") != "ok":
+            continue
+        val, rcp = _repr_fixed(item, now)
+        then = dc.get_report_item(corp_code, item, buy_date)
+        then_val = _repr_fixed(item, then)[0] if then.get("status") == "ok" else None
+        if item == "audit_opinion":
+            note = "최근 사업보고서 기준"
+        elif then_val == val:
+            note = "매수 시점과 동일"
+        else:
+            note = "매수 이후 변경됨"
+        out.append({"label": label, "value": val, "note": note,
+                    "url": f"https://dart.fss.or.kr/dsaf001/main.do?rcpNo={rcp}"})
+    return out
+
+
+def _match_disclosures(move_date: str, disclosures: list[dict]) -> str:
+    """급변일 [D-1,D+1] 창의 화이트리스트 공시만 매칭 (노이즈 필터와 동일 기준 —
+    IR 등 반복성 공시가 급락 근거로 오인되지 않게)."""
+    lo = date.fromisoformat(move_date).toordinal() - 1
+    hi = date.fromisoformat(move_date).toordinal() + 1
+    hits = [d["title"].strip() for d in disclosures
+            if lo <= date.fromisoformat(d["submitted"]).toordinal() <= hi
+            and classify(d.get("title", ""), d.get("pblntf_ty"))["type"] in _WHITELIST]
+    if hits:
+        return "매칭: " + ", ".join(hits[:3])
+    return ts.MOVE_NO_MATCH
+
+
+def build_moves_block(ticker: str, buy_date: str, as_of: str, disclosures: list[dict]) -> dict:
+    rows = dc.price_get_daily(ticker, "2000-01-01", as_of)  # z-score용 이력 포함
+    res = dmv.detect_moves(rows, CFG["price_move"])
+    window = [m for m in res["moves"] if buy_date <= m["date"] <= as_of]
+    cap = CFG["timeline"]["move_display_cap"]
+    shown = window[:cap]
+    for m in shown:
+        m["match"] = _match_disclosures(m["date"], disclosures)
+    note = res["threshold_note"]
+    if len(window) > cap:
+        note += f" · 급변 {len(window)}건 중 {cap}건 표기(초과분 접음)"
+    missing = [d for d in res["missing_days"] if buy_date <= d <= as_of]
+    return {"moves": shown, "missing_days": missing, "threshold_note": note}
+
+
+def build_return_block(case: dict, as_of: str) -> dict:
+    ticker, buy_date, market = case["ticker"], case["buy_date"], case["market"]
+    prices = dc.price_get_daily(ticker, "2000-01-01", as_of)
+    buy_d, buy_close = _close_on(prices, buy_date)
+    _, asof_close = _close_on(prices, as_of)
+    buy_price = case.get("scene", {}).get("buy_price")
+    if buy_price:
+        base, basis = float(buy_price), f"실제 체결가 {buy_price}원"
+    else:
+        base, basis = buy_close, f"매수일({buy_d}) 종가 {buy_close:.0f}원 — 실제 체결가와 다를 수 있는 참고치"
+    stock_ret = (asof_close - base) / base * 100
+
+    idx = dc.price_get_daily(f"index_{market}", "2000-01-01", as_of)
+    _, ib = _close_on(idx, buy_date)
+    _, ia = _close_on(idx, as_of)
+    mkt_ret = (ia - ib) / ib * 100
+
+    band = CFG["market_compare"]["similar_band_pp"]
+    diff = stock_ret - mkt_ret
+    tag = "유사" if abs(diff) <= band else ("상회" if diff > 0 else "하회")
+    return {"stock_return_pct": stock_ret, "market_return_pct": mkt_ret,
+            "market_tag": tag, "basis_note": basis}
+
+
+def build_timeline(case_id: str, as_of: str | None = None, with_price_overlay: bool = True) -> dict:
+    """PRD 4.1 파이프라인(저장·게이트 제외)을 실행해 render용 ctx를 만든다. 순수(디스크 읽기만)."""
+    case = _load_case(case_id)
+    as_of = as_of or case["as_of"]
+    corp, ticker, buy_date = case["corp_code"], case["ticker"], case["buy_date"]
+
+    disclosures = dc.list_disclosures(corp, buy_date, as_of, None, as_of)
+    changed, other = collect_changed(corp, buy_date, as_of)
+    unchanged = collect_unchanged(corp, buy_date, as_of)
+    moves_block = (build_moves_block(ticker, buy_date, as_of, disclosures)
+                   if with_price_overlay else {"moves": [], "missing_days": [], "threshold_note": ""})
+    return {
+        "case_id": case_id, "corp_name": case["corp_name"], "market": case["market"],
+        "buy_date": buy_date, "as_of": as_of, "days_elapsed": _days(buy_date, as_of),
+        "changed": changed, "other_count": other, "unchanged": unchanged,
+        "moves_block": moves_block, "return_block": build_return_block(case, as_of),
+    }
+
+
+def run_timeline(case_id: str, as_of: str | None = None, with_price_overlay: bool = True) -> dict:
+    """빌드 → 조립 → 게이트 → 저장. {path, violations} 반환."""
+    ctx = build_timeline(case_id, as_of, with_price_overlay)
+    md = rnd.render_timeline(ctx)
+    violations = gate_check(md)
+    out_dir = ROOT / "reports" / case_id
+    out_dir.mkdir(parents=True, exist_ok=True)
+    path = out_dir / f"timeline-{ctx['as_of']}.md"
+    path.write_text(md, encoding="utf-8")
+    return {"path": str(path), "violations": violations, "as_of": ctx["as_of"]}
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(prog="run_skill")
+    sub = ap.add_subparsers(dest="skill", required=True)
+    t = sub.add_parser("timeline")
+    t.add_argument("--case", required=True)
+    t.add_argument("--as-of", default=None)
+    t.add_argument("--no-price-overlay", action="store_true")
+    args = ap.parse_args()
+
+    if args.skill == "timeline":
+        res = run_timeline(args.case, args.as_of, not args.no_price_overlay)
+        print(f"저장: {res['path']}")
+        if res["violations"]:
+            print("게이트 위반:")
+            for v in res["violations"]:
+                print(f"  - {v}")
+            return 1
+        print("게이트 PASS")
+        return 0
+    return 2
+
+
+if __name__ == "__main__":
+    sys.exit(main())

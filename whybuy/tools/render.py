@@ -1,8 +1,90 @@
-"""브리핑 템플릿 조립 단일 모듈 (0.7-4) — whybuy.
+"""브리핑 템플릿 조립 단일 모듈 (0.7-4) — whybuy (G6).
 
 브리핑 조립은 이 한 모듈에만 존재한다. 스킬 코드에 템플릿 문자열을 인라인으로
 흩뿌리지 않는다. 고정 문구는 textstore에서 임포트해 게이트와 어긋나지 않게 한다.
-수치 포맷(±N%)도 여기 한 곳에서 생성한다. (templates/*.md 파일 외재화는 로드맵.)
-
-TODO(G6): timeline 조립. TODO(G8): audit·mirror 조립. G0 스켈레톤.
+수치 포맷(±N%)도 여기 한 곳에서 생성한다. 에이전트 서술이 없어도 완성 브리핑이
+나오는 정적 경로: 이벤트 유형별 기본 서술문(_EVENT_SUMMARY).
 """
+from __future__ import annotations
+
+import textstore as ts
+
+# 이벤트 유형별 기본 서술문 (Codex 없이 도는 정적 실행 경로)
+_EVENT_SUMMARY = {
+    "earnings": "실적(잠정 또는 정기)이 공시되었습니다",
+    "dividend": "배당 관련 결정이 공시되었습니다",
+    "treasury": "자기주식 관련 결정 또는 결과가 공시되었습니다",
+    "capital_change": "자본구조 변경(증자·전환사채·감자)이 공시되었습니다",
+    "audit": "감사보고서가 제출되었습니다",
+    "litigation": "소송·제재 관련 공시가 있었습니다",
+    "supply_contract": "단일판매·공급계약이 공시되었습니다",
+    "facility_investment": "신규 시설투자가 공시되었습니다",
+    "business_halt": "영업정지·사업중단이 공시되었습니다",
+}
+
+_MARKET_KO = {"kospi": "코스피", "kosdaq": "코스닥", "konex": "코넥스"}
+
+
+def pct(x: float) -> str:
+    """수치 포맷 단일 출처: 항상 부호 + 소수 1자리 %."""
+    return f"{x:+.1f}%"
+
+
+def event_summary(event_type: str) -> str:
+    return _EVENT_SUMMARY.get(event_type, "공시가 있었습니다")
+
+
+def market_ko(market: str) -> str:
+    return _MARKET_KO.get(market, market)
+
+
+def render_timeline(ctx: dict) -> str:
+    """PRD 4.1 타임라인 브리핑 마크다운 조립. ctx는 run_skill의 순수 파이프라인 산출."""
+    L = []
+    L.append(f"# {ctx['buy_date']}, 당신이 산 이후 {ctx['corp_name']}에 일어난 일")
+    L.append("")
+    L.append(f"> {ts.as_of_notice(ctx['as_of'])} (매수 후 {ctx['days_elapsed']}일 경과)")
+    r = ctx["return_block"]
+    L.append(
+        f"> 보유 수익률(참고): {pct(r['stock_return_pct'])} "
+        f"(기준: {r['basis_note']}, 배당 미반영) · 같은 기간 {market_ko(ctx['market'])} "
+        f"{pct(r['market_return_pct'])} → 시장 대비 {r['market_tag']}"
+    )
+    L.append("")
+
+    # 변한 것
+    L.append("## 변한 것")
+    if ctx["changed"]:
+        for e in ctx["changed"]:
+            line = f"- {e['date']}: {event_summary(e['event_type'])} [{e['title']}, 원문]({e['url']})"
+            if e.get("fact"):
+                line += f" · {e['fact']}"     # 사실 수치 병기(판정 딱지 없음)
+            L.append(line)
+    else:
+        L.append("- 이 기간 화이트리스트 유형(실적·배당·자기주식·자본변경·감사·소송·공급·시설·사업중단)의 공시는 없었습니다.")
+    if ctx["other_count"]:
+        L.append(f"> 그 외 공시 {ctx['other_count']}건은 접었습니다 (임원 지분변동·기업설명회 등 반복성 공시). "
+                 f"전체 목록은 원장 disclosures 픽스처에서 확인할 수 있습니다.")
+    L.append("")
+
+    # 변하지 않은 것
+    L.append("## 변하지 않은 것")
+    for u in ctx["unchanged"]:
+        L.append(f"- {u['label']}: {u['value']} ({u['note']}) [근거 공시 원문]({u['url']})")
+    L.append("")
+
+    # 주가가 크게 움직인 날
+    L.append("## 주가가 크게 움직인 날 (참고)")
+    mv = ctx["moves_block"]
+    if mv["moves"]:
+        for m in mv["moves"]:
+            L.append(f"- {m['date']}: {pct(m['change_pct'])} ← {m['match']}")
+    else:
+        L.append(f"- {mv['threshold_note']}을 넘는 가격 변동은 이 기간에 없었습니다.")
+    if mv["missing_days"]:
+        L.append(f"> 거래 데이터 결측일(거래정지 등): {', '.join(mv['missing_days'])}")
+    L.append("")
+
+    L.append("---")
+    L.append(ts.DISCLAIMER)
+    return "\n".join(L) + "\n"
