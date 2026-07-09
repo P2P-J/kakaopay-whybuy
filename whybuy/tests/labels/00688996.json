@@ -1,0 +1,2011 @@
+[
+  {
+    "rcp_no": "20250106000136",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250108000518",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250108000515",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250109800560",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250110000848",
+    "pblntf_ty": "B",
+    "type": "etc",
+    "is_correction": true,
+    "title": "[기재정정]주요사항보고서(상각형조건부자본증권발행결정)"
+  },
+  {
+    "rcp_no": "20250110000517",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "증권신고서(채무증권)"
+  },
+  {
+    "rcp_no": "20250110000483",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "주식등의대량보유상황보고서(약식)"
+  },
+  {
+    "rcp_no": "20250113000083",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": true,
+    "title": "[기재정정]주식등의대량보유상황보고서(약식)"
+  },
+  {
+    "rcp_no": "20250115000392",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "일괄신고서"
+  },
+  {
+    "rcp_no": "20250116000106",
+    "pblntf_ty": "B",
+    "type": "etc",
+    "is_correction": true,
+    "title": "[기재정정]주요사항보고서(상각형조건부자본증권발행결정)"
+  },
+  {
+    "rcp_no": "20250116000113",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": true,
+    "title": "[첨부정정]증권신고서(채무증권)"
+  },
+  {
+    "rcp_no": "20250116000112",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "[발행조건확정]증권신고서(채무증권)"
+  },
+  {
+    "rcp_no": "20250116000110",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": true,
+    "title": "[기재정정]증권신고서(채무증권)"
+  },
+  {
+    "rcp_no": "20250120800718",
+    "pblntf_ty": "I",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "최대주주등소유주식변동신고서"
+  },
+  {
+    "rcp_no": "20250120800498",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "결산실적공시예고(안내공시)"
+  },
+  {
+    "rcp_no": "20250120800495",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250122000198",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "증권발행실적보고서"
+  },
+  {
+    "rcp_no": "20250122000016",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "투자설명서"
+  },
+  {
+    "rcp_no": "20250123000479",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "투자설명서(일괄신고)"
+  },
+  {
+    "rcp_no": "20250123000472",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "일괄신고추가서류"
+  },
+  {
+    "rcp_no": "20250124000698",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "증권발행실적보고서"
+  },
+  {
+    "rcp_no": "20250203000226",
+    "pblntf_ty": "E",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "신탁계약에의한취득상황보고서"
+  },
+  {
+    "rcp_no": "20250205000299",
+    "pblntf_ty": "B",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주요사항보고서(자기주식취득결정)"
+  },
+  {
+    "rcp_no": "20250205800646",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": true,
+    "title": "[기재정정]현금ㆍ현물배당결정(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20250205800598",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주식소각결정"
+  },
+  {
+    "rcp_no": "20250205800608",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당결정(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20250205800605",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당결정"
+  },
+  {
+    "rcp_no": "20250205800594",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당결정(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20250205800590",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정"
+  },
+  {
+    "rcp_no": "20250205800491",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "매출액또는손익구조30%(대규모법인은15%)이상변경(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20250205800488",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "매출액또는손익구조30%(대규모법인은15%)이상변경(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20250205800487",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "매출액또는손익구조30%(대규모법인은15%)이상변경"
+  },
+  {
+    "rcp_no": "20250205800485",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20250205800483",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20250205800475",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)"
+  },
+  {
+    "rcp_no": "20250211000443",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250211000382",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250211000275",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250211000264",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250211000254",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250211000224",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250211000143",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250211000126",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250211000121",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250211000092",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250211000081",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250211000071",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250211000059",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": true,
+    "title": "[기재정정]임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250211000802",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250214800461",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250218000218",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250221800569",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "주주총회소집결의"
+  },
+  {
+    "rcp_no": "20250224004361",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "투자설명서(일괄신고)"
+  },
+  {
+    "rcp_no": "20250224004319",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "일괄신고추가서류"
+  },
+  {
+    "rcp_no": "20250225003376",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "증권발행실적보고서"
+  },
+  {
+    "rcp_no": "20250304000411",
+    "pblntf_ty": "B",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주요사항보고서(자기주식취득신탁계약해지결정)"
+  },
+  {
+    "rcp_no": "20250304800674",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": true,
+    "title": "[기재정정]주식소각결정"
+  },
+  {
+    "rcp_no": "20250305000661",
+    "pblntf_ty": "D",
+    "type": "etc",
+    "is_correction": false,
+    "title": "의결권대리행사권유참고서류"
+  },
+  {
+    "rcp_no": "20250305000657",
+    "pblntf_ty": "E",
+    "type": "etc",
+    "is_correction": false,
+    "title": "주주총회소집공고"
+  },
+  {
+    "rcp_no": "20250305000353",
+    "pblntf_ty": "E",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "신탁계약해지결과보고서"
+  },
+  {
+    "rcp_no": "20250305801235",
+    "pblntf_ty": "I",
+    "type": "audit",
+    "is_correction": false,
+    "title": "감사보고서제출"
+  },
+  {
+    "rcp_no": "20250305801169",
+    "pblntf_ty": "I",
+    "type": "audit",
+    "is_correction": false,
+    "title": "감사보고서제출(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20250305801136",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업지배구조보고서공시(연차보고서)"
+  },
+  {
+    "rcp_no": "20250305801017",
+    "pblntf_ty": "I",
+    "type": "audit",
+    "is_correction": false,
+    "title": "감사보고서제출(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20250311801161",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기타경영사항(자율공시)"
+  },
+  {
+    "rcp_no": "20250311801111",
+    "pblntf_ty": "I",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "최대주주등소유주식변동신고서"
+  },
+  {
+    "rcp_no": "20250311801085",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250314001704",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "사업보고서 (2024.12)"
+  },
+  {
+    "rcp_no": "20250317000312",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": true,
+    "title": "[기재정정]일괄신고서"
+  },
+  {
+    "rcp_no": "20250321001728",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "투자설명서(일괄신고)"
+  },
+  {
+    "rcp_no": "20250321001710",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "일괄신고추가서류"
+  },
+  {
+    "rcp_no": "20250324000576",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "증권발행실적보고서"
+  },
+  {
+    "rcp_no": "20250326000980",
+    "pblntf_ty": "E",
+    "type": "etc",
+    "is_correction": false,
+    "title": "사외이사의선임ㆍ해임또는중도퇴임에관한신고"
+  },
+  {
+    "rcp_no": "20250326801882",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "정기주주총회결과"
+  },
+  {
+    "rcp_no": "20250402000057",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250409000847",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250410800957",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250414002206",
+    "pblntf_ty": "E",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "자기주식취득결과보고서"
+  },
+  {
+    "rcp_no": "20250414800531",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": true,
+    "title": "[기재정정]주식소각결정"
+  },
+  {
+    "rcp_no": "20250424000368",
+    "pblntf_ty": "B",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주요사항보고서(자기주식취득결정)"
+  },
+  {
+    "rcp_no": "20250424800498",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업가치제고계획(자율공시)"
+  },
+  {
+    "rcp_no": "20250424800485",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주식소각결정"
+  },
+  {
+    "rcp_no": "20250424800496",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당결정"
+  },
+  {
+    "rcp_no": "20250424800490",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정"
+  },
+  {
+    "rcp_no": "20250424800426",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20250424800424",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20250424800422",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)"
+  },
+  {
+    "rcp_no": "20250425000885",
+    "pblntf_ty": "B",
+    "type": "treasury",
+    "is_correction": true,
+    "title": "[기재정정]주요사항보고서(자기주식취득결정)"
+  },
+  {
+    "rcp_no": "20250425000903",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "투자설명서(일괄신고)"
+  },
+  {
+    "rcp_no": "20250425000896",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "일괄신고추가서류"
+  },
+  {
+    "rcp_no": "20250425800790",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": true,
+    "title": "[기재정정]기업가치제고계획(자율공시)              (이행현황)"
+  },
+  {
+    "rcp_no": "20250428000478",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "증권발행실적보고서"
+  },
+  {
+    "rcp_no": "20250428800769",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기타안내사항(안내공시)"
+  },
+  {
+    "rcp_no": "20250428800762",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "해외증권거래소등에신고한사업보고서등의국내신고"
+  },
+  {
+    "rcp_no": "20250430001042",
+    "pblntf_ty": "B",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주요사항보고서(자기주식취득신탁계약해지결정)"
+  },
+  {
+    "rcp_no": "20250430001178",
+    "pblntf_ty": "E",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "신탁계약해지결과보고서"
+  },
+  {
+    "rcp_no": "20250430800690",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": true,
+    "title": "[기재정정]주식소각결정"
+  },
+  {
+    "rcp_no": "20250507800448",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250507800438",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250512800395",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250515002905",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "분기보고서 (2025.03)"
+  },
+  {
+    "rcp_no": "20250516000121",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": true,
+    "title": "[기재정정]일괄신고서"
+  },
+  {
+    "rcp_no": "20250516800139",
+    "pblntf_ty": "I",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "최대주주등소유주식변동신고서"
+  },
+  {
+    "rcp_no": "20250520800291",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250520800286",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250521000101",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250523000648",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "투자설명서(일괄신고)"
+  },
+  {
+    "rcp_no": "20250523000647",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "일괄신고추가서류"
+  },
+  {
+    "rcp_no": "20250526000374",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": true,
+    "title": "[기재정정]분기보고서 (2025.03)"
+  },
+  {
+    "rcp_no": "20250526000370",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": true,
+    "title": "[기재정정]사업보고서 (2024.12)"
+  },
+  {
+    "rcp_no": "20250526000286",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "증권발행실적보고서"
+  },
+  {
+    "rcp_no": "20250609800303",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250611000533",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250630000522",
+    "pblntf_ty": "E",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "자기주식취득결과보고서"
+  },
+  {
+    "rcp_no": "20250630800686",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": true,
+    "title": "[기재정정]주식소각결정"
+  },
+  {
+    "rcp_no": "20250630800260",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "지속가능경영보고서등관련사항(자율공시)"
+  },
+  {
+    "rcp_no": "20250707800079",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기타안내사항(안내공시)"
+  },
+  {
+    "rcp_no": "20250710800228",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250718000553",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "투자설명서(일괄신고)"
+  },
+  {
+    "rcp_no": "20250718000550",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "일괄신고추가서류"
+  },
+  {
+    "rcp_no": "20250721000153",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "증권발행실적보고서"
+  },
+  {
+    "rcp_no": "20250724000324",
+    "pblntf_ty": "B",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주요사항보고서(자기주식취득신탁계약체결결정)"
+  },
+  {
+    "rcp_no": "20250724800397",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당결정"
+  },
+  {
+    "rcp_no": "20250724800375",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주식소각결정"
+  },
+  {
+    "rcp_no": "20250724800391",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정"
+  },
+  {
+    "rcp_no": "20250724800303",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)"
+  },
+  {
+    "rcp_no": "20250724800270",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20250724800272",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20250808000526",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "투자설명서(일괄신고)"
+  },
+  {
+    "rcp_no": "20250808000519",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "일괄신고추가서류"
+  },
+  {
+    "rcp_no": "20250811000355",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "증권발행실적보고서"
+  },
+  {
+    "rcp_no": "20250814004355",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "반기보고서 (2025.06)"
+  },
+  {
+    "rcp_no": "20250818000105",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": true,
+    "title": "[기재정정]일괄신고서"
+  },
+  {
+    "rcp_no": "20250818800260",
+    "pblntf_ty": "I",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "최대주주등소유주식변동신고서"
+  },
+  {
+    "rcp_no": "20250818800191",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250827800109",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250901800406",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250901800405",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250904800269",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250922800489",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20251013800534",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기타안내사항(안내공시)"
+  },
+  {
+    "rcp_no": "20251014000148",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "주식등의대량보유상황보고서(약식)"
+  },
+  {
+    "rcp_no": "20251014000033",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "주식등의대량보유상황보고서(약식)"
+  },
+  {
+    "rcp_no": "20251015800659",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20251016000278",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "투자설명서(일괄신고)"
+  },
+  {
+    "rcp_no": "20251016000272",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "일괄신고추가서류"
+  },
+  {
+    "rcp_no": "20251017000251",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "증권발행실적보고서"
+  },
+  {
+    "rcp_no": "20251021800329",
+    "pblntf_ty": "I",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "최대주주등소유주식변동신고서"
+  },
+  {
+    "rcp_no": "20251028000286",
+    "pblntf_ty": "E",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "신탁계약에의한취득상황보고서"
+  },
+  {
+    "rcp_no": "20251030800487",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당결정"
+  },
+  {
+    "rcp_no": "20251030800482",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정"
+  },
+  {
+    "rcp_no": "20251030800465",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20251030800463",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20251030800460",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)"
+  },
+  {
+    "rcp_no": "20251030800452",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당결정(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20251030800446",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20251112800402",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20251112800399",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20251114003011",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "분기보고서 (2025.09)"
+  },
+  {
+    "rcp_no": "20251114003130",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20251114003124",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20251114002951",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20251117000104",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": true,
+    "title": "[기재정정]일괄신고서"
+  },
+  {
+    "rcp_no": "20251117000016",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20251117800175",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20251117800174",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20251120800530",
+    "pblntf_ty": "I",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "최대주주등소유주식변동신고서"
+  },
+  {
+    "rcp_no": "20251202800530",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당결정(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20251202800520",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20251209000193",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": true,
+    "title": "[기재정정]일괄신고서"
+  },
+  {
+    "rcp_no": "20251209800395",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기타경영사항(자율공시)"
+  },
+  {
+    "rcp_no": "20251209800388",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "주주명부폐쇄기간또는기준일설정"
+  },
+  {
+    "rcp_no": "20251226000293",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "일괄신고서"
+  },
+  {
+    "rcp_no": "20260105800287",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20260106000679",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260106000611",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260106000210",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260106000174",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260107000637",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260108000550",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260109000437",
+    "pblntf_ty": "B",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주요사항보고서(자기주식취득신탁계약해지결정)"
+  },
+  {
+    "rcp_no": "20260109000562",
+    "pblntf_ty": "E",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "신탁계약해지결과보고서"
+  },
+  {
+    "rcp_no": "20260109800474",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": true,
+    "title": "[기재정정]주식소각결정"
+  },
+  {
+    "rcp_no": "20260112000219",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260115000264",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "투자설명서(일괄신고)"
+  },
+  {
+    "rcp_no": "20260115000255",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "일괄신고추가서류"
+  },
+  {
+    "rcp_no": "20260116000210",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "증권발행실적보고서"
+  },
+  {
+    "rcp_no": "20260116800454",
+    "pblntf_ty": "I",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "최대주주등소유주식변동신고서"
+  },
+  {
+    "rcp_no": "20260121800369",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "결산실적공시예고(안내공시)"
+  },
+  {
+    "rcp_no": "20260121800366",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20260202000968",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "주식등의대량보유상황보고서(약식)"
+  },
+  {
+    "rcp_no": "20260205000367",
+    "pblntf_ty": "B",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주요사항보고서(자기주식취득결정)"
+  },
+  {
+    "rcp_no": "20260205800723",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "매출액또는손익구조30%(대규모법인은15%)이상변경(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20260205800690",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주식소각결정"
+  },
+  {
+    "rcp_no": "20260205800710",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "매출액또는손익구조30%(대규모법인은15%)이상변경"
+  },
+  {
+    "rcp_no": "20260205800658",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20260205800669",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20260205800646",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)"
+  },
+  {
+    "rcp_no": "20260205800576",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "매출액또는손익구조30%(대규모법인은15%)이상변경(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20260205800620",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당결정(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20260205800608",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당결정"
+  },
+  {
+    "rcp_no": "20260205800604",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정"
+  },
+  {
+    "rcp_no": "20260210800675",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": true,
+    "title": "[기재정정]기타안내사항(안내공시)"
+  },
+  {
+    "rcp_no": "20260210800464",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기타안내사항(안내공시)"
+  },
+  {
+    "rcp_no": "20260219800622",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20260225801306",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "주주총회소집결의"
+  },
+  {
+    "rcp_no": "20260225801153",
+    "pblntf_ty": "I",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "유상증자결정(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20260227007658",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260305801565",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업지배구조보고서공시(연차보고서)"
+  },
+  {
+    "rcp_no": "20260306000856",
+    "pblntf_ty": "D",
+    "type": "etc",
+    "is_correction": false,
+    "title": "의결권대리행사권유참고서류"
+  },
+  {
+    "rcp_no": "20260306000847",
+    "pblntf_ty": "E",
+    "type": "etc",
+    "is_correction": false,
+    "title": "주주총회소집공고"
+  },
+  {
+    "rcp_no": "20260306801328",
+    "pblntf_ty": "I",
+    "type": "audit",
+    "is_correction": false,
+    "title": "감사보고서제출(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20260306801143",
+    "pblntf_ty": "I",
+    "type": "audit",
+    "is_correction": false,
+    "title": "감사보고서제출"
+  },
+  {
+    "rcp_no": "20260306801136",
+    "pblntf_ty": "I",
+    "type": "audit",
+    "is_correction": false,
+    "title": "감사보고서제출(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20260310800647",
+    "pblntf_ty": "I",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "최대주주등소유주식변동신고서"
+  },
+  {
+    "rcp_no": "20260311004467",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260311004186",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "주식등의대량보유상황보고서(약식)"
+  },
+  {
+    "rcp_no": "20260311801094",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20260312001220",
+    "pblntf_ty": "D",
+    "type": "etc",
+    "is_correction": false,
+    "title": "의결권대리행사권유참고서류"
+  },
+  {
+    "rcp_no": "20260313001191",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "사업보고서 (2025.12)"
+  },
+  {
+    "rcp_no": "20260316000944",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": true,
+    "title": "[기재정정]일괄신고서"
+  },
+  {
+    "rcp_no": "20260324000835",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": true,
+    "title": "[기재정정]사업보고서 (2025.12)"
+  },
+  {
+    "rcp_no": "20260324000827",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": true,
+    "title": "[기재정정]반기보고서 (2025.06)"
+  },
+  {
+    "rcp_no": "20260324000822",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": true,
+    "title": "[기재정정]사업보고서 (2024.12)"
+  },
+  {
+    "rcp_no": "20260324000813",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": true,
+    "title": "[기재정정]반기보고서 (2024.06)"
+  },
+  {
+    "rcp_no": "20260325001274",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "투자설명서(일괄신고)"
+  },
+  {
+    "rcp_no": "20260325001262",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "일괄신고추가서류"
+  },
+  {
+    "rcp_no": "20260326000841",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "증권발행실적보고서"
+  },
+  {
+    "rcp_no": "20260326001189",
+    "pblntf_ty": "E",
+    "type": "etc",
+    "is_correction": false,
+    "title": "사외이사의선임ㆍ해임또는중도퇴임에관한신고"
+  },
+  {
+    "rcp_no": "20260326803383",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "정기주주총회결과"
+  },
+  {
+    "rcp_no": "20260327802428",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업가치제고계획(자율공시)              (고배당기업 표시를 위한 재공시)"
+  },
+  {
+    "rcp_no": "20260407000642",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "주식등의대량보유상황보고서(약식)"
+  },
+  {
+    "rcp_no": "20260409001480",
+    "pblntf_ty": "E",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "자기주식취득결과보고서"
+  },
+  {
+    "rcp_no": "20260409800886",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": true,
+    "title": "[기재정정]주식소각결정"
+  },
+  {
+    "rcp_no": "20260409800577",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20260417800683",
+    "pblntf_ty": "I",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "최대주주등소유주식변동신고서"
+  },
+  {
+    "rcp_no": "20260422000592",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "투자설명서(일괄신고)"
+  },
+  {
+    "rcp_no": "20260422000585",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "일괄신고추가서류"
+  },
+  {
+    "rcp_no": "20260423000690",
+    "pblntf_ty": "B",
+    "type": "etc",
+    "is_correction": false,
+    "title": "주요사항보고서(상각형조건부자본증권발행결정)"
+  },
+  {
+    "rcp_no": "20260423000431",
+    "pblntf_ty": "B",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주요사항보고서(자기주식취득결정)"
+  },
+  {
+    "rcp_no": "20260423000586",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "증권발행실적보고서"
+  },
+  {
+    "rcp_no": "20260423800940",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": true,
+    "title": "[기재정정]현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정"
+  },
+  {
+    "rcp_no": "20260423800583",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주식소각결정              (기보유 자기주식)"
+  },
+  {
+    "rcp_no": "20260423800568",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주식소각결정"
+  },
+  {
+    "rcp_no": "20260423800554",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당결정"
+  },
+  {
+    "rcp_no": "20260423800550",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정"
+  },
+  {
+    "rcp_no": "20260423800481",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)"
+  },
+  {
+    "rcp_no": "20260423800476",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20260423800477",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20260429801135",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "해외증권거래소등에신고한사업보고서등의국내신고"
+  },
+  {
+    "rcp_no": "20260430001806",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "증권신고서(채무증권)"
+  },
+  {
+    "rcp_no": "20260430001927",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260504000344",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260507800917",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20260508000967",
+    "pblntf_ty": "B",
+    "type": "etc",
+    "is_correction": true,
+    "title": "[기재정정]주요사항보고서(상각형조건부자본증권발행결정)"
+  },
+  {
+    "rcp_no": "20260508001028",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "[발행조건확정]증권신고서(채무증권)"
+  },
+  {
+    "rcp_no": "20260508001018",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": true,
+    "title": "[기재정정]증권신고서(채무증권)"
+  },
+  {
+    "rcp_no": "20260514001124",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "증권발행실적보고서"
+  },
+  {
+    "rcp_no": "20260514000033",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "투자설명서"
+  },
+  {
+    "rcp_no": "20260515002888",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "분기보고서 (2026.03)"
+  },
+  {
+    "rcp_no": "20260518000311",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": true,
+    "title": "[첨부정정]일괄신고서"
+  },
+  {
+    "rcp_no": "20260518000281",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": true,
+    "title": "[기재정정]일괄신고서"
+  },
+  {
+    "rcp_no": "20260518800758",
+    "pblntf_ty": "I",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "최대주주등소유주식변동신고서"
+  },
+  {
+    "rcp_no": "20260520800664",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기타안내사항(안내공시)"
+  },
+  {
+    "rcp_no": "20260520800640",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20260522000522",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "투자설명서(일괄신고)"
+  },
+  {
+    "rcp_no": "20260522000511",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "일괄신고추가서류"
+  },
+  {
+    "rcp_no": "20260526000413",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "증권발행실적보고서"
+  },
+  {
+    "rcp_no": "20260601000584",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260605800347",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20260610000235",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": true,
+    "title": "[기재정정]임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260610000024",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260611000242",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260617000314",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "주식등의대량보유상황보고서(약식)"
+  },
+  {
+    "rcp_no": "20260618000392",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "투자설명서(일괄신고)"
+  },
+  {
+    "rcp_no": "20260618000388",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "일괄신고추가서류"
+  },
+  {
+    "rcp_no": "20260618800642",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당결정(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20260618800628",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20260618800553",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20260619000667",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": true,
+    "title": "[기재정정]사업보고서 (2025.12)"
+  },
+  {
+    "rcp_no": "20260619000525",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "증권발행실적보고서"
+  },
+  {
+    "rcp_no": "20260626800874",
+    "pblntf_ty": "I",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "유상증자결정(자회사의 주요경영사항)"
+  },
+  {
+    "rcp_no": "20260630800958",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "지속가능경영보고서등관련사항(자율공시)"
+  },
+  {
+    "rcp_no": "20260701000618",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "투자설명서(일괄신고)"
+  },
+  {
+    "rcp_no": "20260701000612",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "일괄신고추가서류"
+  },
+  {
+    "rcp_no": "20260702000533",
+    "pblntf_ty": "C",
+    "type": "capital_change",
+    "is_correction": false,
+    "title": "증권발행실적보고서"
+  },
+  {
+    "rcp_no": "20260709800262",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  }
+]

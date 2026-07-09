@@ -1,0 +1,1598 @@
+[
+  {
+    "rcp_no": "20250123800672",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250124000514",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250206800865",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "금전대여결정"
+  },
+  {
+    "rcp_no": "20250206800692",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "매출액또는손익구조30%(대규모법인은15%)이상변경"
+  },
+  {
+    "rcp_no": "20250206800662",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당결정"
+  },
+  {
+    "rcp_no": "20250206800652",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정"
+  },
+  {
+    "rcp_no": "20250206800624",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주식소각결정"
+  },
+  {
+    "rcp_no": "20250206800563",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)"
+  },
+  {
+    "rcp_no": "20250224003806",
+    "pblntf_ty": "B",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주요사항보고서(자기주식처분결정)"
+  },
+  {
+    "rcp_no": "20250224004081",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250225005119",
+    "pblntf_ty": "D",
+    "type": "etc",
+    "is_correction": false,
+    "title": "의결권대리행사권유참고서류"
+  },
+  {
+    "rcp_no": "20250225005105",
+    "pblntf_ty": "E",
+    "type": "etc",
+    "is_correction": false,
+    "title": "주주총회소집공고"
+  },
+  {
+    "rcp_no": "20250225801349",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "주주총회소집결의"
+  },
+  {
+    "rcp_no": "20250228006512",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228006495",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228006455",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228006429",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228006385",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228006362",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228006331",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228006287",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228006247",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228006183",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228006143",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228006105",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228006038",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228005976",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228005877",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228005709",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228005655",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228005596",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228005521",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228005461",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228005383",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228005321",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228005265",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228005229",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228005175",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228005100",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228004969",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228004928",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228004854",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228004757",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228004656",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228004598",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228004550",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228004445",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228004379",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228004251",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228004161",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228004054",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228003981",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228003907",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228003719",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228003642",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228003479",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228003402",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228003342",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228003289",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228003197",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228003160",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228003133",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228003096",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228003076",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228003028",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228002999",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228002983",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228002950",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228002897",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228002856",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228002805",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228002757",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228002709",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228002640",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228002564",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228002487",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228002399",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250228001739",
+    "pblntf_ty": "E",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "자기주식처분결과보고서"
+  },
+  {
+    "rcp_no": "20250228800184",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": true,
+    "title": "[기재정정]현금ㆍ현물배당결정"
+  },
+  {
+    "rcp_no": "20250304801000",
+    "pblntf_ty": "I",
+    "type": "audit",
+    "is_correction": false,
+    "title": "감사보고서제출"
+  },
+  {
+    "rcp_no": "20250312000382",
+    "pblntf_ty": "D",
+    "type": "etc",
+    "is_correction": false,
+    "title": "의결권대리행사권유참고서류"
+  },
+  {
+    "rcp_no": "20250318001223",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "사업보고서 (2024.12)"
+  },
+  {
+    "rcp_no": "20250318000812",
+    "pblntf_ty": "D",
+    "type": "etc",
+    "is_correction": true,
+    "title": "[기재정정]의결권대리행사권유참고서류"
+  },
+  {
+    "rcp_no": "20250318000762",
+    "pblntf_ty": "E",
+    "type": "etc",
+    "is_correction": true,
+    "title": "[기재정정]주주총회소집공고"
+  },
+  {
+    "rcp_no": "20250326000883",
+    "pblntf_ty": "E",
+    "type": "etc",
+    "is_correction": false,
+    "title": "사외이사의선임ㆍ해임또는중도퇴임에관한신고"
+  },
+  {
+    "rcp_no": "20250326801657",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "정기주주총회결과"
+  },
+  {
+    "rcp_no": "20250401003742",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "주식등의대량보유상황보고서(약식)"
+  },
+  {
+    "rcp_no": "20250424800797",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250508800408",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)"
+  },
+  {
+    "rcp_no": "20250515002949",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "분기보고서 (2025.03)"
+  },
+  {
+    "rcp_no": "20250530801245",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업지배구조보고서공시"
+  },
+  {
+    "rcp_no": "20250604800045",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "풍문또는보도에대한해명(미확정)"
+  },
+  {
+    "rcp_no": "20250625800690",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "지속가능경영보고서등관련사항(자율공시)"
+  },
+  {
+    "rcp_no": "20250703800591",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "풍문또는보도에대한해명(미확정)"
+  },
+  {
+    "rcp_no": "20250718000538",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20250724800445",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250807000253",
+    "pblntf_ty": "B",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주요사항보고서(자기주식취득결정)"
+  },
+  {
+    "rcp_no": "20250807800353",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주식소각결정"
+  },
+  {
+    "rcp_no": "20250807800310",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당결정"
+  },
+  {
+    "rcp_no": "20250807800302",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정"
+  },
+  {
+    "rcp_no": "20250807800275",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)"
+  },
+  {
+    "rcp_no": "20250814004354",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "반기보고서 (2025.06)"
+  },
+  {
+    "rcp_no": "20250822800407",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": true,
+    "title": "[기재정정]현금ㆍ현물배당결정"
+  },
+  {
+    "rcp_no": "20250829800538",
+    "pblntf_ty": "I",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "최대주주등소유주식변동신고서(최대주주변경시)"
+  },
+  {
+    "rcp_no": "20250829800523",
+    "pblntf_ty": "I",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "최대주주변경"
+  },
+  {
+    "rcp_no": "20250912000347",
+    "pblntf_ty": "E",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "자기주식취득결과보고서"
+  },
+  {
+    "rcp_no": "20250912800372",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": true,
+    "title": "[기재정정]주식소각결정"
+  },
+  {
+    "rcp_no": "20250917800476",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20250923000289",
+    "pblntf_ty": "B",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주요사항보고서(자기주식취득결정)"
+  },
+  {
+    "rcp_no": "20250923800350",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업가치제고계획(자율공시)"
+  },
+  {
+    "rcp_no": "20250923800333",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주식소각결정"
+  },
+  {
+    "rcp_no": "20250923800335",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "수시공시의무관련사항(공정공시)"
+  },
+  {
+    "rcp_no": "20250923800308",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "풍문또는보도에대한해명"
+  },
+  {
+    "rcp_no": "20250923800304",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "타법인주식및출자증권처분결정(자율공시)"
+  },
+  {
+    "rcp_no": "20250923800266",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "타법인주식및출자증권취득결정"
+  },
+  {
+    "rcp_no": "20250923800261",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "타법인주식및출자증권처분결정"
+  },
+  {
+    "rcp_no": "20250923800256",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "타법인주식및출자증권취득결정"
+  },
+  {
+    "rcp_no": "20250926000780",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20251023000334",
+    "pblntf_ty": "E",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "자기주식취득결과보고서"
+  },
+  {
+    "rcp_no": "20251023800475",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20251023800450",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": true,
+    "title": "[기재정정]주식소각결정"
+  },
+  {
+    "rcp_no": "20251106800392",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "[첨부추가]연결재무제표기준영업(잠정)실적(공정공시)"
+  },
+  {
+    "rcp_no": "20251106800377",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "금전대여결정"
+  },
+  {
+    "rcp_no": "20251114002334",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "분기보고서 (2025.09)"
+  },
+  {
+    "rcp_no": "20251124800597",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": true,
+    "title": "[기재정정]타법인주식및출자증권취득결정"
+  },
+  {
+    "rcp_no": "20251124800626",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": true,
+    "title": "[기재정정]타법인주식및출자증권처분결정(자율공시)"
+  },
+  {
+    "rcp_no": "20251212800012",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": true,
+    "title": "[기재정정]투자판단관련주요경영사항"
+  },
+  {
+    "rcp_no": "20251216000341",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20251216801385",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "주주명부폐쇄기간또는기준일설정"
+  },
+  {
+    "rcp_no": "20260107000683",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260107000676",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260122800493",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20260122800431",
+    "pblntf_ty": "I",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "최대주주변경"
+  },
+  {
+    "rcp_no": "20260122800445",
+    "pblntf_ty": "I",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "최대주주등소유주식변동신고서(최대주주변경시)"
+  },
+  {
+    "rcp_no": "20260130000329",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "주식등의대량보유상황보고서(약식)"
+  },
+  {
+    "rcp_no": "20260205800632",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주식소각결정"
+  },
+  {
+    "rcp_no": "20260205800615",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당결정"
+  },
+  {
+    "rcp_no": "20260205800583",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)"
+  },
+  {
+    "rcp_no": "20260205800589",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": false,
+    "title": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정"
+  },
+  {
+    "rcp_no": "20260224004024",
+    "pblntf_ty": "B",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주요사항보고서(자기주식처분결정)"
+  },
+  {
+    "rcp_no": "20260225005854",
+    "pblntf_ty": "D",
+    "type": "etc",
+    "is_correction": false,
+    "title": "의결권대리행사권유참고서류"
+  },
+  {
+    "rcp_no": "20260225005779",
+    "pblntf_ty": "E",
+    "type": "etc",
+    "is_correction": false,
+    "title": "주주총회소집공고"
+  },
+  {
+    "rcp_no": "20260225801868",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "주주총회소집결의"
+  },
+  {
+    "rcp_no": "20260226001891",
+    "pblntf_ty": "E",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "자기주식처분결과보고서"
+  },
+  {
+    "rcp_no": "20260226800305",
+    "pblntf_ty": "I",
+    "type": "dividend",
+    "is_correction": true,
+    "title": "[기재정정]현금ㆍ현물배당결정"
+  },
+  {
+    "rcp_no": "20260226800114",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": true,
+    "title": "[기재정정]주주총회소집결의"
+  },
+  {
+    "rcp_no": "20260304001159",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304001133",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304001120",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304001105",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304001085",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304001069",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304001053",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304001043",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304001030",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304001000",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000985",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000960",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000952",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000922",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000917",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000911",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000899",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000883",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000855",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000837",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000818",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000805",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000787",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000773",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000764",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000751",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000738",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000719",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000700",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000694",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000668",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000659",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000648",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000641",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000625",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000621",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000612",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000599",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000584",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000580",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000578",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000566",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000562",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000559",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000557",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000553",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000552",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000548",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000546",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000541",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000536",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000532",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000510",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000486",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000480",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000470",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000457",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000455",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000448",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000433",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000428",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304000420",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260304801494",
+    "pblntf_ty": "I",
+    "type": "audit",
+    "is_correction": false,
+    "title": "감사보고서제출"
+  },
+  {
+    "rcp_no": "20260318001422",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "사업보고서 (2025.12)"
+  },
+  {
+    "rcp_no": "20260326001316",
+    "pblntf_ty": "E",
+    "type": "etc",
+    "is_correction": false,
+    "title": "사외이사의선임ㆍ해임또는중도퇴임에관한신고"
+  },
+  {
+    "rcp_no": "20260326802654",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "정기주주총회결과"
+  },
+  {
+    "rcp_no": "20260327800467",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업가치제고계획(자율공시)              (고배당기업 표시를 위한 재공시)"
+  },
+  {
+    "rcp_no": "20260331004823",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260403003343",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "임원ㆍ주요주주특정증권등소유상황보고서"
+  },
+  {
+    "rcp_no": "20260416800490",
+    "pblntf_ty": "I",
+    "type": "treasury",
+    "is_correction": false,
+    "title": "주식소각결정"
+  },
+  {
+    "rcp_no": "20260423800798",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업설명회(IR)개최(안내공시)"
+  },
+  {
+    "rcp_no": "20260507800610",
+    "pblntf_ty": "I",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "연결재무제표기준영업(잠정)실적(공정공시)"
+  },
+  {
+    "rcp_no": "20260508000295",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "주식등의대량보유상황보고서(약식)"
+  },
+  {
+    "rcp_no": "20260512800697",
+    "pblntf_ty": "I",
+    "type": "business_halt",
+    "is_correction": false,
+    "title": "영업정지(종속회사의주요경영사항)"
+  },
+  {
+    "rcp_no": "20260515002914",
+    "pblntf_ty": "A",
+    "type": "earnings",
+    "is_correction": false,
+    "title": "분기보고서 (2026.03)"
+  },
+  {
+    "rcp_no": "20260527000073",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "주식등의대량보유상황보고서(약식)"
+  },
+  {
+    "rcp_no": "20260529801917",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "기업지배구조보고서공시"
+  },
+  {
+    "rcp_no": "20260604000207",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "주식등의대량보유상황보고서(약식)"
+  },
+  {
+    "rcp_no": "20260609000066",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "주식등의대량보유상황보고서(약식)"
+  },
+  {
+    "rcp_no": "20260610000680",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "주식등의대량보유상황보고서(약식)"
+  },
+  {
+    "rcp_no": "20260629800954",
+    "pblntf_ty": "I",
+    "type": "etc",
+    "is_correction": false,
+    "title": "지속가능경영보고서등관련사항(자율공시)"
+  },
+  {
+    "rcp_no": "20260703000113",
+    "pblntf_ty": "D",
+    "type": "major_shareholder",
+    "is_correction": false,
+    "title": "주식등의대량보유상황보고서(약식)"
+  }
+]
