@@ -13,7 +13,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "mcp"))
@@ -237,6 +237,147 @@ def run_timeline(case_id: str, as_of: str | None = None, with_price_overlay: boo
     return {"path": str(path), "violations": violations, "as_of": ctx["as_of"]}
 
 
+# ── reason-recall (PRD 4.2) ───────────────────────────────────────
+# 유형 → (보기 라벨, 클레임 템플릿 PRD 5.3)
+_REASON_META = {
+    "earnings_improvement": ("실적 개선 기대", "전사 영업이익이 개선 추세다"),
+    "shareholder_return": ("주주환원 기대", "회사가 자기주식 취득 등 주주환원을 실행한다"),
+    "dividend": ("배당 목적", "배당이 유지 또는 확대된다"),
+    "growth_order": ("성장·수주 기대", "발표된 투자/계약이 정상 진행된다"),
+    "new_business": ("신사업 기대", "신사업이 공식 기록상 진행된다"),
+    "theme": ("시장·커뮤니티 분위기·추천", "당시 시장 분위기나 추천을 보고 샀다"),
+    "price_anchor": ("저가 매수", "주가가 저점이라고 보고 샀다"),
+    "unknown": ("잘 모르겠음", ""),
+}
+# 공시 세부유형 → 매수 논거 유형 (악재성 capital_change 등은 제외)
+_DISC_BUYREASON = {"earnings": "earnings_improvement", "treasury": "shareholder_return",
+                   "dividend": "dividend", "supply_contract": "growth_order",
+                   "facility_investment": "growth_order"}
+# 사유 라이브러리 보기 문구
+_LIBRARY_LABEL = {
+    "theme": "당시 해당 종목의 시장·커뮤니티 분위기나 추천 때문에",
+    "price_anchor": "주가가 많이 떨어져서 싸 보여서",
+    "dividend": "배당 받으려고",
+    "earnings_improvement": "오래 갖고 갈 우량 기업이라고 생각해서",
+    "unknown": "그냥 유명해서 / 잘 모르겠음",
+}
+_Q1_OPTIONS = ["유튜브·SNS", "커뮤니티·지인 추천", "뉴스 기사", "원래 알던 회사", "직접 입력"]
+_Q3_OPTIONS = ["단기", "수개월", "장기", "생각 안 해봄"]
+# 직접 입력 정적 키워드 분류 (보수적 — 확신 없으면 unknown)
+_CUSTOM_KW = {"배당": "dividend", "영업이익": "earnings_improvement", "실적": "earnings_improvement",
+              "자사주": "shareholder_return", "자기주식": "shareholder_return",
+              "공급계약": "growth_order", "수주": "growth_order", "신사업": "new_business"}
+
+
+def _has_valid_op(corp_code: str, as_of: str) -> bool:
+    """영업이익 계정 존재·유효 여부 (금융지주 안전핀 — 없으면 earnings 라이브러리 미노출)."""
+    for p in sorted(_PERIODS, reverse=True):
+        blk = dc.get_financials(corp_code, p[:4], p[4:], as_of)
+        if blk.get("status") == "ok":
+            return any(a["account_nm"] == "영업이익" for a in blk["accounts"])
+    return False
+
+
+def classify_custom(text: str) -> str:
+    """직접 입력 정적 분류 (보수적): 키워드 확신 시에만 유형, 아니면 unknown."""
+    for kw, t in _CUSTOM_KW.items():
+        if kw in text:
+            return t
+    return "unknown"
+
+
+def build_recall(case_id: str, as_of: str | None = None) -> dict:
+    """lookback 공시 → 결정적 후보(공시 r1..) + 라이브러리 + Q1/Q3. 미래 정보 차단."""
+    case = _load_case(case_id)
+    corp, buy = case["corp_code"], case["buy_date"]
+    cfg = CFG["recall"]
+    d_from = (date.fromisoformat(buy) - timedelta(days=cfg["lookback_before_days"])).isoformat()
+    cand_asof = as_of or (date.fromisoformat(buy) + timedelta(days=cfg["lookback_after_days"])).isoformat()
+
+    # 공시 후보 (스크립트 확정 분류분만, 매수 논거 유형, 매수일 근접순, 최대 4)
+    seen, cands = set(), []
+    for d in dc.list_disclosures(corp, d_from, cand_asof, None, cand_asof):
+        c = classify(d.get("title", ""), d.get("pblntf_ty"))
+        rt = _DISC_BUYREASON.get(c["type"])
+        if not rt or (c["type"] == "treasury" and "처분" in d["title"]):
+            continue
+        if rt in seen:                      # 유형 중복 방지
+            continue
+        seen.add(rt)
+        cands.append({"submitted": d["submitted"], "type": rt, "rcp_no": d["rcp_no"], "title": d["title"].strip()})
+    cands.sort(key=lambda x: (abs(date.fromisoformat(x["submitted"]).toordinal()
+                                  - date.fromisoformat(buy).toordinal()), x["rcp_no"]))
+    disclosure = []
+    for i, c in enumerate(cands[:4], 1):
+        label, claim = _REASON_META[c["type"]]
+        disclosure.append({"id": f"r{i}", "type": c["type"], "label": label, "claim": claim,
+                           "source": "disclosure", "source_rcp_no": c["rcp_no"], "evidence_title": c["title"]})
+
+    # 라이브러리 (노출 규칙): 항상 theme·price_anchor·unknown, dividend는 배당이력 있을 때,
+    # earnings는 공시 후보에 실적 없고 영업이익 계정 유효할 때(안전핀). 총 Q2 ≤ 8.
+    has_earn_disc = any(c["type"] == "earnings_improvement" for c in disclosure)
+    lib_types = ["theme", "price_anchor", "unknown"]
+    if dc.get_report_item(corp, "dividend", cand_asof).get("status") == "ok":
+        lib_types.insert(0, "dividend")
+    if (not has_earn_disc) and _has_valid_op(corp, cand_asof):
+        lib_types.insert(0, "earnings_improvement")
+    room = 8 - len(disclosure) - 1          # custom 슬롯 1 예약
+    library = []
+    for t in lib_types[:max(room, 2)]:      # 고정 보기 최소 2 보장
+        label, claim = _REASON_META[t]
+        library.append({"id": f"lib_{t}", "type": t, "label": _LIBRARY_LABEL[t], "claim": claim,
+                        "source": "library", "source_rcp_no": None})
+
+    return {"case_id": case_id, "corp_name": case["corp_name"], "buy_date": buy, "as_of": cand_asof,
+            "q1_options": _Q1_OPTIONS, "q3_options": _Q3_OPTIONS,
+            "disclosure_candidates": disclosure, "library_candidates": library,
+            "unknown_mode_note": "‘잘 모르겠음’ 단독 선택 시 thesis-audit은 판정 대신 타임라인 요약 모드로 동작합니다."}
+
+
+def choose_reasons(recall: dict, chosen_ids: list[str], custom_text: str | None = None) -> list[dict]:
+    """선택된 후보 ID → 원장 reason 레코드. 미래 정보 없음(후보가 이미 lookback 내)."""
+    by_id = {c["id"]: c for c in recall["disclosure_candidates"] + recall["library_candidates"]}
+    reasons = []
+    for i, cid in enumerate(chosen_ids, 1):
+        c = by_id.get(cid)
+        if not c:
+            raise KeyError(f"후보 ID 없음: {cid} (가능: {', '.join(by_id)})")
+        reasons.append({"reason_id": f"r{i}", "type": c["type"], "label": c["label"], "claim": c["claim"],
+                        "source": c["source"], "user_text": None,
+                        "source_rcp_no": c.get("source_rcp_no"), "selected_at": recall["as_of"]})
+    if custom_text:
+        t = classify_custom(custom_text)
+        label, claim = _REASON_META[t]
+        reasons.append({"reason_id": f"r{len(reasons)+1}", "type": t, "label": "직접 입력", "claim": claim,
+                        "source": "custom", "user_text": custom_text,
+                        "source_rcp_no": None, "selected_at": recall["as_of"]})
+    return reasons
+
+
+def commit_reasons(case_id: str, reasons: list[dict], context: dict | None = None) -> None:
+    """선택 결과를 원장에 기록 (스키마 검증 통과 시에만 — ledger_store가 강제)."""
+    import ledger_store as ls
+    case = _load_case(case_id)
+    record = {"case_id": case_id, "ticker": case["ticker"], "corp_code": case["corp_code"],
+              "corp_name": case["corp_name"], "buy_date": case["buy_date"], "is_fixture": True,
+              "context": context or {"q1_channel": "unspecified", "q3_horizon": "unspecified"},
+              "reasons": reasons, "audits": []}
+    ls.upsert_case(record)
+
+
+def run_recall(case_id: str, choose: str | None, custom_text: str | None,
+               commit: bool, as_of: str | None = None) -> dict:
+    recall = build_recall(case_id, as_of)
+    chosen = [c.strip() for c in choose.split(",")] if choose else []
+    reasons = choose_reasons(recall, chosen, custom_text)
+    md = rnd.render_recall_confirm(recall, reasons)
+    violations = gate_check(md)
+    if commit and not violations:
+        commit_reasons(case_id, reasons)
+    return {"recall": recall, "reasons": reasons, "briefing": md,
+            "violations": violations, "committed": commit and not violations}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(prog="run_skill")
     sub = ap.add_subparsers(dest="skill", required=True)
@@ -244,6 +385,13 @@ def main() -> int:
     t.add_argument("--case", required=True)
     t.add_argument("--as-of", default=None)
     t.add_argument("--no-price-overlay", action="store_true")
+    r = sub.add_parser("recall")
+    r.add_argument("--case", required=True)
+    r.add_argument("--choose", default=None)
+    r.add_argument("--custom-text", default=None)
+    r.add_argument("--as-of", default=None)
+    r.add_argument("--dry-run", action="store_true")
+    r.add_argument("--commit", action="store_true")
     args = ap.parse_args()
 
     if args.skill == "timeline":
@@ -255,6 +403,14 @@ def main() -> int:
                 print(f"  - {v}")
             return 1
         print("게이트 PASS")
+        return 0
+    if args.skill == "recall":
+        res = run_recall(args.case, args.choose, args.custom_text, args.commit and not args.dry_run, args.as_of)
+        print(res["briefing"])
+        if res["violations"]:
+            print("게이트 위반:", res["violations"])
+            return 1
+        print(f"[{'커밋됨' if res['committed'] else 'dry-run(미기록)'}] 논거 {len(res['reasons'])}건")
         return 0
     return 2
 

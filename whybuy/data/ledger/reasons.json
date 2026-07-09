@@ -10,7 +10,7 @@
       "is_fixture": true,
       "context": {
         "q1_channel": "unspecified",
-        "q3_horizon": "long_term"
+        "q3_horizon": "unspecified"
       },
       "reasons": [
         {
@@ -21,7 +21,7 @@
           "source": "disclosure",
           "user_text": null,
           "source_rcp_no": "20250311001085",
-          "selected_at": "2025-03-25"
+          "selected_at": "2025-03-28"
         }
       ],
       "audits": []
@@ -35,7 +35,7 @@
       "is_fixture": true,
       "context": {
         "q1_channel": "unspecified",
-        "q3_horizon": "long_term"
+        "q3_horizon": "unspecified"
       },
       "reasons": [
         {
@@ -45,8 +45,8 @@
           "claim": "전사 영업이익이 개선 추세다",
           "source": "disclosure",
           "user_text": null,
-          "source_rcp_no": "20250213800004",
-          "selected_at": "2025-02-24"
+          "source_rcp_no": "20250213800006",
+          "selected_at": "2025-02-27"
         }
       ],
       "audits": []
@@ -60,18 +60,18 @@
       "is_fixture": true,
       "context": {
         "q1_channel": "unspecified",
-        "q3_horizon": "long_term"
+        "q3_horizon": "unspecified"
       },
       "reasons": [
         {
           "reason_id": "r1",
           "type": "dividend",
-          "label": "배당 지속·확대 기대",
+          "label": "배당 목적",
           "claim": "배당이 유지 또는 확대된다",
           "source": "disclosure",
           "user_text": null,
-          "source_rcp_no": "20250318001223",
-          "selected_at": "2025-03-19"
+          "source_rcp_no": "20250228800184",
+          "selected_at": "2025-03-22"
         }
       ],
       "audits": []

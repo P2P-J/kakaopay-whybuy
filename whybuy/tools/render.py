@@ -88,3 +88,27 @@ def render_timeline(ctx: dict) -> str:
     L.append("---")
     L.append(ts.DISCLAIMER)
     return "\n".join(L) + "\n"
+
+
+def render_recall_confirm(recall: dict, reasons: list[dict]) -> str:
+    """reason-recall 선택 확인 브리핑. 사용자가 고른 논거를 사실로 되읽어준다(판정 없음)."""
+    L = []
+    L.append(f"# {recall['corp_name']} — 산 이유 재구성 (확인)")
+    L.append("")
+    L.append(f"> {ts.as_of_notice(recall['as_of'])} (후보는 매수일 전후 창의 공시로만 생성)")
+    L.append("")
+    if reasons:
+        L.append("## 기록할 논거")
+        for r in reasons:
+            src = {"disclosure": "공시 근거", "library": "일반 사유", "custom": "직접 입력"}.get(r["source"], r["source"])
+            tail = f" (원문 rcp {r['source_rcp_no']})" if r.get("source_rcp_no") else ""
+            L.append(f"- [{src}] {r['label']}: “{r['claim'] or r.get('user_text', '')}”{tail}")
+        if any(r["type"] == "unknown" for r in reasons):
+            L.append("")
+            L.append(f"> {recall['unknown_mode_note']}")
+    else:
+        L.append("선택된 논거가 없습니다.")
+    L.append("")
+    L.append("---")
+    L.append(ts.DISCLAIMER)
+    return "\n".join(L) + "\n"
