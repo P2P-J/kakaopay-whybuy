@@ -1,0 +1,18 @@
+# 세션 대화 로그 (개인 로컬 아티팩트 — 저장소에 올리지 않음)
+logs/**/*.jsonl
+
+# 환경 변수 / 키
+.env
+
+# 라이브 모드 API 응답 캐시
+data/cache/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# OS / 에디터
+.DS_Store
