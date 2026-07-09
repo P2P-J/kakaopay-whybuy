@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "generated": "2026-07-09",
+  "note": "G1 리허설 확정값 (docs/REHEARSAL.md 아엔 승인 2026-07-09). buy_date/as_of·case-003 종목은 골든. 자리표시자 아님.",
+  "as_of_window": { "start": "2025-01-02", "end": "2026-07-09" },
+  "cases": [
+    {
+      "case_id": "case-001",
+      "ticker": "005930",
+      "corp_code": "00126380",
+      "corp_name": "삼성전자(주)",
+      "market": "kospi",
+      "buy_date": "2025-03-25",
+      "as_of": "2025-04-09",
+      "purpose": "타임라인 + 유효 판정 + '하락했지만 나빠진 사실 0건' 장면 (처분효과 반박)",
+      "primary_mode": "thesis-audit",
+      "argument": {
+        "type": "earnings_improvement",
+        "claim": "전사 영업이익이 개선 추세다",
+        "trigger_rcp_no": "20250311001085",
+        "trigger_title": "사업보고서 (2024.12)"
+      },
+      "expected_verdict": {
+        "rule_id": "RULE-EARN-01",
+        "status": "valid",
+        "basis": "CFS",
+        "evidence_rcp_no": "20250408800003",
+        "note": "as_of 최신 잠정 20251Q 영업이익 6.7조 vs 전년 6.6조 (+1% YoY) → 개선=유효"
+      },
+      "scene": {
+        "price_return_pct": -11.4,
+        "worsened_disclosures": 0,
+        "buy_price": 59800,
+        "as_of_price": 53000
+      }
+    },
+    {
+      "case_id": "case-002",
+      "ticker": "035720",
+      "corp_code": "00258801",
+      "corp_name": "카카오",
+      "market": "kospi",
+      "buy_date": "2025-02-24",
+      "as_of": "2025-05-14",
+      "purpose": "급변–공시 매칭 + 반증 판정 + 거울 모드. 출제사 모기업 주식으로 '본인들 주식으로 검증' 내러티브",
+      "primary_mode": "mirror",
+      "argument": {
+        "type": "earnings_improvement",
+        "claim": "전사 영업이익이 개선 추세다",
+        "trigger_rcp_no": "20250213800004",
+        "trigger_title": "연결재무제표기준영업(잠정)실적 (20244Q)"
+      },
+      "expected_verdict": {
+        "rule_id": "RULE-EARN-01",
+        "status": "refuted",
+        "basis": "CFS",
+        "evidence_rcp_no": "20250508800012",
+        "note": "as_of 최신 잠정 20251Q 영업이익 1,054억 vs 전년 1,203억 (-12% YoY) → 감익=반증. 매수 논거와 동일 '영업(잠정)실적' 유형이 반대 신호로 재등장 = 거울",
+        "secondary_evidence_rcp_no": "20250522000332",
+        "secondary_note": "전환사채발행결정 — 희석 요인 보조 약화"
+      },
+      "scene": {
+        "price_return_pct": -4.0,
+        "buy_price": 39550,
+        "as_of_price": 37950,
+        "move_note": "카카오 급변일(±5%) 총 43건은 대부분 상승 랠리. 논거 약화(20251Q 감익)와 가격 급변은 같은 날 겹치지 않음 → '급변≠논거변화'를 타임라인에 정직 표기 (REHEARSAL §3.2 선택지 A)"
+      }
+    },
+    {
+      "case_id": "case-003",
+      "ticker": "033780",
+      "corp_code": "00244455",
+      "corp_name": "케이티앤지",
+      "market": "kospi",
+      "buy_date": "2025-03-19",
+      "as_of": "2026-03-20",
+      "purpose": "배당 논거 유효 케이스 (규칙성·장기 배당). 유효 + 수익 장면 (case-001 하락+유효와 대비)",
+      "primary_mode": "thesis-audit",
+      "argument": {
+        "type": "dividend",
+        "claim": "배당이 유지 또는 확대된다",
+        "trigger_rcp_no": "20250318001223",
+        "trigger_title": "사업보고서 (2024.12) — 결산배당 이력 5,000→5,200→5,400원"
+      },
+      "expected_verdict": {
+        "rule_id": "RULE-DIV-01",
+        "status": "valid",
+        "evidence_rcp_no": "20260205800615",
+        "note": "FY25 결산배당결정 6,000원 vs FY24 5,400원 확대 → 유효. 동일 주기(연간 결산배당)끼리 비교 (2025-08-07 중간배당과 혼동 금지)"
+      },
+      "scene": {
+        "price_return_pct": 54.1,
+        "buy_price": 102200,
+        "as_of_price": 157500
+      }
+    }
+  ]
+}
