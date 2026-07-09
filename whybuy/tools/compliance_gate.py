@@ -31,8 +31,8 @@ def _rules() -> dict:
 
 
 _R = _rules()
-# 거울 고정 질문은 textstore 단일 출처에서 자동 등재
-_EXCEPTIONS = list(_R.get("allowed_exceptions") or []) + [ts.MIRROR_QUESTION]
+# 거울 고정 질문(상태별)은 textstore 단일 출처에서 자동 등재
+_EXCEPTIONS = list(_R.get("allowed_exceptions") or []) + list(ts.ALL_MIRROR_QUESTIONS)
 
 
 def scan_forbidden(text: str) -> list[str]:

@@ -1,6 +1,6 @@
 {
   "name": "whybuy",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "매수일 앵커로 공시 사실을 재정렬하고 매수 논거를 공시 원문으로 판정하는 국내 상장주식 전용 플러그인 (왜샀지). 추천하지 않고 판정한다.",
   "skills": [
     { "name": "buy-timeline", "path": "skills/buy-timeline/SKILL.md" },

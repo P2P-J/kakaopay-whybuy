@@ -88,3 +88,18 @@ def test_golden_mirror_case002():
 
 def test_golden_audit_case003():
     assert rnd.render_audit(rs.build_audit("case-003")) == open(os.path.join(_G, "audit-case-003.md"), encoding="utf-8").read()
+
+
+def test_golden_mirror_case001():
+    assert rnd.render_mirror(rs.build_audit("case-001", mirror=True)) == open(os.path.join(_G, "mirror-case-001.md"), encoding="utf-8").read()
+
+def test_golden_mirror_case003():
+    assert rnd.render_mirror(rs.build_audit("case-003", mirror=True)) == open(os.path.join(_G, "mirror-case-003.md"), encoding="utf-8").read()
+
+
+def test_mirror_question_by_case_state():
+    # 상태별 거울 질문: 손실+반증→기본, 손실+유효→HOLD, 수익→PROFIT
+    import textstore as ts
+    assert rs.build_audit("case-002", mirror=True)["mirror_question"] == ts.MIRROR_QUESTION
+    assert rs.build_audit("case-001", mirror=True)["mirror_question"] == ts.MIRROR_QUESTION_HOLD
+    assert rs.build_audit("case-003", mirror=True)["mirror_question"] == ts.MIRROR_QUESTION_PROFIT

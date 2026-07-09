@@ -24,10 +24,16 @@ REFUTED_DEFINITION = (
     "반증은 회사에 대한 평가가 아니라 사용자의 논거 대비 공시 사실의 판정입니다."
 )
 
-# 거울 모드 고정 질문 — 게이트 허용 예외 목록에 등재되는 유일한 의문문.
-# compliance_gate가 이 상수를 임포트해 예외로 자동 등재하므로, 문구 변경은 여기 한 곳이면 된다
-# (gate_rules.yaml의 allowed_exceptions에 문자열을 중복 등재하지 않는다 — 단일 출처 원칙).
+# 거울 모드 고정 질문 — 게이트 허용 예외로 등재되는 의문문(들). 상태별로 프레이밍이 갈린다:
+# 손실+가격 하락엔 "하락한 가격 vs 회사 변화", 손실인데 논거 유효면 "사실 vs 가격", 수익이면
+# "사실 vs 수익률 숫자". compliance_gate가 ALL_MIRROR_QUESTIONS를 임포트해 전부 예외 등재하므로
+# 문구는 여기 한 곳에서 관리한다(gate_rules에 문자열 중복 안 함 — 단일 출처).
 MIRROR_QUESTION = "지금 팔고 싶은 게 하락한 가격 때문인가요, 회사가 달라져서인가요?"
+# 손실이지만 논거가 유효 — 가격 신호와 사실 신호가 엇갈리는 장면
+MIRROR_QUESTION_HOLD = "가격은 빠졌지만 회사가 달라졌다는 공시는 아직 없습니다. 지금 팔려는 마음은 사실에서 오나요, 가격에서 오나요?"
+# 수익 중이고 논거가 유효 — 하락 프레이밍이 안 맞는 경우
+MIRROR_QUESTION_PROFIT = "가격은 올랐고 산 이유도 아직 유효합니다. 지금 파는 이유는 달라진 사실인가요, 수익률 숫자인가요?"
+ALL_MIRROR_QUESTIONS = [MIRROR_QUESTION, MIRROR_QUESTION_HOLD, MIRROR_QUESTION_PROFIT]
 
 # "당신이 고르지 않았지만 알아야 할 새로운 사실" 섹션 헤더 (audit·mirror 공용)
 NEW_FACTS_HEADER = "당신이 고르지 않았지만 알아야 할 새로운 사실"

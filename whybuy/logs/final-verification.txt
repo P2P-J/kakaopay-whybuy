@@ -1,0 +1,10 @@
+# whybuy 최종 전량 검증 (G9) — 2026-07-09
+
+[PASS] 전체 테스트 스위트: exit=0 · 151 passed in 6.22s
+[PASS] 컨트랙트 3종 × 3케이스: exit=0 · 컨트랙트 3종 × 3케이스 전부 PASS
+[PASS] 픽스처 스키마: exit=0 · 픽스처 검증 통과: corp/disclosures/financials/report_items/prices 스키마·완결성 OK
+[PASS] 원장 스키마: exit=0 · 원장 검증 통과: reasons.json (스키마 reasons.schema.json)
+[PASS] MCP stdio 스모크(기동+initialize+tools/list): exit=0 · {"jsonrpc":"2.0","id":1,"result":{"protocolVersion":"2024-11-05","capabilities":{"experimental":{},"tools":{"listChanged":false}},"serverInfo":{"name":"whybuy","version":"1.28.1"}}}
+[PASS] DART 링크 검증(HTTP 200+본문 정상): exit=0 · 로그: logs/link-check.txt
+
+== 종합: 전부 PASS ==

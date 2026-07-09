@@ -147,7 +147,7 @@ def render_mirror(ctx: dict) -> str:
     L.append(f"### {ts.NEW_FACTS_HEADER}")
     L.extend(_material_lines(ctx["new_material"]))
     L.append("")
-    L.append(f"## {ts.MIRROR_QUESTION}")
+    L.append(f"## {ctx.get('mirror_question', ts.MIRROR_QUESTION)}")
     L.append("")
     L.append(ts.REFUTED_DEFINITION)
     L.append("")

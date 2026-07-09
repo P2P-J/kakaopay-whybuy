@@ -422,7 +422,15 @@ def build_audit(case_id: str, as_of: str | None = None, mirror: bool = False) ->
            "buy_date": buy, "as_of": as_of, "days_elapsed": _days(buy, as_of),
            "verdicts": verdicts, "new_material": scan_new_material(corp, buy, as_of, linked)}
     if mirror:
-        ctx["return_block"] = build_return_block(case, as_of)
+        rb = build_return_block(case, as_of)
+        ctx["return_block"] = rb
+        # 상태별 거울 질문: 손실+반증→기본, 수익→수익률 프레이밍, 손실인데 유효→사실vs가격 엇갈림
+        if any(v["status"] == "refuted" for v in verdicts):
+            ctx["mirror_question"] = ts.MIRROR_QUESTION
+        elif rb["stock_return_pct"] >= 0:
+            ctx["mirror_question"] = ts.MIRROR_QUESTION_PROFIT
+        else:
+            ctx["mirror_question"] = ts.MIRROR_QUESTION_HOLD
     return ctx
 
 

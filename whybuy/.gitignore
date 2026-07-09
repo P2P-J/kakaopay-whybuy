@@ -6,5 +6,5 @@ __pycache__/
 *.pyc
 .pytest_cache/
 
-# 스킬 런타임 산출물 (골든은 tests/golden/에 별도 보관)
-reports/
+# 스킬 산출물: 데모 브리핑은 커밋(제출 증거), 게이트 타임스탬프 로그만 무시
+reports/**/gate-log-*.txt
