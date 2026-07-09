@@ -1,0 +1,16 @@
+# 확인불가(unverifiable) 유형 레지스트리 — whybuy (G5)
+#
+# 공시로 검증되지 않는 논거 유형. verdict_engine은 이 파일에서 유형→rule_id·서술을
+# 로드한다(엔진 소스에 가격 관련 문자열을 두지 않기 위한 외재화 — 가격 격리 스모크 대응).
+# 판정 딱지 대신 "기대–실체 갭" 서술을 제공한다.
+
+unverifiable_types:
+  theme:
+    rule_id: RULE-THM-01
+    note: "테마·분위기 편승은 공시로 검증되는 사실이 아닙니다. 관련 매출·수주 공시의 존재 여부만 사실로 제시합니다."
+  price_anchor:
+    rule_id: RULE-PRC-01
+    note: "저가/고가 등 가격 수준은 공시로 검증되는 사실이 아닙니다. 보유 수익률·시장 대비 수치는 참고 사실로만 병기합니다."
+  unknown:
+    rule_id: null
+    note: "판정을 생략하고 타임라인 요약 모드로 제시합니다."
