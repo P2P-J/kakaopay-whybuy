@@ -1,0 +1,7 @@
+# whybuy 로컬 무시 규칙
+.env
+.venv/
+data/cache/
+__pycache__/
+*.pyc
+.pytest_cache/

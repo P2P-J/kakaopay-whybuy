@@ -1,0 +1,6 @@
+# whybuy 개발·실행 의존성 (개발 환경, 오프라인 재현). 픽스처 수집은 requirements-fetch.txt.
+requests
+jsonschema
+pyyaml
+pytest
+mcp==1.28.1   # MCP 파이썬 SDK — 버전 고정 (0.7 / DEV-PLAN G3 리스크 대응)

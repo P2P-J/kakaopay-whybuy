@@ -1,0 +1,15 @@
+=== G0 완료판정 로그 (2026-07-09) ===
+CWD: whybuy/  (venv: .venv, python 3.12.3)
+
+[1] python -c "import requests, jsonschema, yaml"
+exit=0
+
+[2] python -m json.tool .codex-plugin/plugin.json
+exit=0 (JSON 유효)
+
+[3] .env 미커밋 확인 (.env.example 존재 && whybuy/.env 미추적)
+.env.example: 존재
+whybuy/.env: 미추적 OK
+
+[검증] .env 파일이 git에 추적되지 않음 (루트/whybuy 전체):
+>> 추적된 .env 없음 OK

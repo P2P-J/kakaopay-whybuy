@@ -1,0 +1,23 @@
+# whybuy 판단 파라미터 중앙화 (0.7-1)
+# 코드 하드코딩 금지. 브리핑에 노출되는 경계값도 이 파일에서 읽어 표기한다.
+# 약화 경계 등 일부 값은 데모용 초기값이며 G1 리허설 후 조정 가능 (골든 아님).
+
+price_move:            # 급변일 감지 (detect_moves.py, G6)
+  abs_threshold_pct: 5.0        # 일간 변동률 절대값 급변 기준 (±%)
+  zscore_threshold: 2.0         # 20거래일 롤링 z-score 급변 기준
+  zscore_window: 20             # z-score 롤링 창 (거래일)
+  price_history_margin_days: 10 # z-score 창 확보용 매수일 이전 안전 마진 (거래일)
+
+market_compare:        # 시장 대비 태그 (run_skill/render, G6)
+  similar_band_pp: 2.0          # 상회/유사/하회 중 "유사" 판정 밴드 (±%p)
+
+recall:                # 논거 후보 수집 (reason-recall, G7)
+  lookback_before_days: 30      # 후보 수집 창 시작 (매수일 D-30)
+  lookback_after_days: 3        # 후보 수집 창 끝 (매수일 D+3)
+  max_choices: 8                # Q2 보기 총 상한 (공시후보 4 + 라이브러리 3 + 직접입력 1)
+
+verdict:               # 판정 룰 경계값 (verdict_engine, G5)
+  earn_weaken_shrink_pct: 50    # RULE-EARN 약화 경계: 증익이나 증가폭 50%↓ 축소=약화
+
+timeline:              # 타임라인 표기 (buy-timeline, G6)
+  move_display_cap: 10          # 급변일 표기 최대 건수 (초과분은 접음)
