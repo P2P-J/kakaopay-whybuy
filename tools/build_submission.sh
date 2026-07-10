@@ -21,9 +21,11 @@ CLEANROOM=0
 for a in "$@"; do [ "$a" = "--cleanroom" ] && CLEANROOM=1; done
 
 echo "== 0) 커밋 상태 확인 =="
-if [ -n "$(git -C "$REPO" status --porcelain -- whybuy README.md)" ]; then
+# whybuy/logs/ 는 대화 로그 사본(untracked, 의도적)이라 경고에서 제외
+DIRTY="$(git -C "$REPO" status --porcelain -- whybuy README.md | grep -v '^?? whybuy/logs/' || true)"
+if [ -n "$DIRTY" ]; then
   echo "⚠ 커밋되지 않은 변경이 있습니다. ZIP은 HEAD 기준으로 뜹니다 — 먼저 커밋하세요."
-  git -C "$REPO" status --short -- whybuy README.md
+  echo "$DIRTY"
 fi
 HEAD_SHA="$(git -C "$REPO" rev-parse --short HEAD)"
 echo "   빌드 기준 커밋: $HEAD_SHA"
