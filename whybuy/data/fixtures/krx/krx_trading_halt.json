@@ -1,0 +1,891 @@
+{
+  "signal": "매매거래정지",
+  "kind": "krx_trading_halt",
+  "source_name": "한국거래소 매매거래정지 종목 현황",
+  "source_url": "https://data.krx.co.kr/",
+  "as_of": "2026-07-10",
+  "rows": [
+    {
+      "ticker": "265690",
+      "name": "ACE 러시아MSCI(합성)",
+      "market": "KOSPI",
+      "date": "2022-03-07",
+      "reason": "투자유의종목(ETF,ETN)"
+    },
+    {
+      "ticker": "099520",
+      "name": "DGI",
+      "market": "KOSDAQ",
+      "date": "2021-03-26",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "000300",
+      "name": "DH오토넥스",
+      "market": "KOSPI",
+      "date": "2024-02-23",
+      "reason": "기타공익과투자자보호및시장관리상"
+    },
+    {
+      "ticker": "245620",
+      "name": "EDGC",
+      "market": "KOSDAQ",
+      "date": "2024-04-08",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "469480",
+      "name": "IBKS제24호스팩",
+      "market": "KOSDAQ",
+      "date": "2026-06-19",
+      "reason": "SPAC 합병(예비심사청구대상)"
+    },
+    {
+      "ticker": "0099X0",
+      "name": "IBKS제25호스팩",
+      "market": "KOSDAQ",
+      "date": "2026-06-30",
+      "reason": "SPAC 합병(예비심사청구대상)"
+    },
+    {
+      "ticker": "009440",
+      "name": "KC그린홀딩스",
+      "market": "KOSPI",
+      "date": "2025-03-19",
+      "reason": "감사의견거절(발행ELW, 발행ETN 포함)"
+    },
+    {
+      "ticker": "119650",
+      "name": "KC코트렐",
+      "market": "KOSPI",
+      "date": "2025-03-19",
+      "reason": "기타공익과투자자보호및시장관리상"
+    },
+    {
+      "ticker": "044180",
+      "name": "KD",
+      "market": "KOSDAQ",
+      "date": "2026-03-24",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "058400",
+      "name": "KNN",
+      "market": "KOSDAQ",
+      "date": "2026-07-03",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "000040",
+      "name": "KR모터스",
+      "market": "KOSPI",
+      "date": "2026-07-03",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "011810",
+      "name": "STX",
+      "market": "KOSPI",
+      "date": "2025-07-03",
+      "reason": "기타공익과투자자보호및시장관리상"
+    },
+    {
+      "ticker": "017040",
+      "name": "광명전기",
+      "market": "KOSPI",
+      "date": "2026-04-07",
+      "reason": "감사의견거절(발행ELW, 발행ETN 포함)"
+    },
+    {
+      "ticker": "465320",
+      "name": "교보15호스팩",
+      "market": "KOSDAQ",
+      "date": "2025-09-11",
+      "reason": "SPAC 합병(예비심사청구대상)"
+    },
+    {
+      "ticker": "001570",
+      "name": "금양",
+      "market": "KOSPI",
+      "date": "2025-03-21",
+      "reason": "감사의견거절(발행ELW, 발행ETN 포함)"
+    },
+    {
+      "ticker": "068240",
+      "name": "다원시스",
+      "market": "KOSDAQ",
+      "date": "2026-03-17",
+      "reason": "상장적격성 실질심사 대상(사유발생)"
+    },
+    {
+      "ticker": "145210",
+      "name": "다이나믹디자인",
+      "market": "KOSPI",
+      "date": "2026-03-23",
+      "reason": "기타공익과투자자보호"
+    },
+    {
+      "ticker": "065150",
+      "name": "대산F&B",
+      "market": "KOSDAQ",
+      "date": "2024-04-05",
+      "reason": "상장적격성 실질심사 대상(사유발생)"
+    },
+    {
+      "ticker": "393970",
+      "name": "대진첨단소재",
+      "market": "KOSDAQ",
+      "date": "2026-03-09",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "069460",
+      "name": "대호에이엘",
+      "market": "KOSPI",
+      "date": "2026-03-23",
+      "reason": "감사의견거절(발행ELW, 발행ETN 포함)"
+    },
+    {
+      "ticker": "012510",
+      "name": "더존비즈온",
+      "market": "KOSPI",
+      "date": "2026-06-26",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "043090",
+      "name": "더테크놀로지",
+      "market": "KOSDAQ",
+      "date": "2025-04-08",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "002210",
+      "name": "동성제약",
+      "market": "KOSPI",
+      "date": "2025-05-07",
+      "reason": "풍문등관련주가및거래량급변"
+    },
+    {
+      "ticker": "001520",
+      "name": "동양",
+      "market": "KOSPI",
+      "date": "2026-07-03",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "001527",
+      "name": "동양2우B",
+      "market": "KOSPI",
+      "date": "2026-07-03",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "001525",
+      "name": "동양우",
+      "market": "KOSPI",
+      "date": "2026-07-03",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "032960",
+      "name": "동일기연",
+      "market": "KOSDAQ",
+      "date": "2026-06-24",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "030350",
+      "name": "드래곤플라이",
+      "market": "KOSDAQ",
+      "date": "2025-03-24",
+      "reason": "상장적격성 실질심사 대상(사유발생)"
+    },
+    {
+      "ticker": "031860",
+      "name": "디에이치엑스컴퍼니",
+      "market": "KOSDAQ",
+      "date": "2026-04-03",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "196490",
+      "name": "디에이테크놀로지",
+      "market": "KOSDAQ",
+      "date": "2024-04-11",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "113810",
+      "name": "디젠스",
+      "market": "KOSDAQ",
+      "date": "2026-07-03",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "266170",
+      "name": "레드우즈",
+      "market": "KONEX",
+      "date": "2026-03-31",
+      "reason": "코넥스 주권 상장폐지 사유발생"
+    },
+    {
+      "ticker": "214610",
+      "name": "롤링스톤",
+      "market": "KOSDAQ",
+      "date": "2026-03-23",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "195990",
+      "name": "루트K",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "054180",
+      "name": "메디콕스",
+      "market": "KOSDAQ",
+      "date": "2025-07-03",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "025560",
+      "name": "미래산업",
+      "market": "KOSPI",
+      "date": "2026-07-07",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "482680",
+      "name": "미래에셋비전스팩7호",
+      "market": "KOSDAQ",
+      "date": "2026-05-12",
+      "reason": "SPAC 합병(예비심사청구대상)"
+    },
+    {
+      "ticker": "066410",
+      "name": "버킷스튜디오",
+      "market": "KOSDAQ",
+      "date": "2023-03-03",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "002410",
+      "name": "범양건영",
+      "market": "KOSPI",
+      "date": "2025-03-20",
+      "reason": "감사의견거절(발행ELW, 발행ETN 포함)"
+    },
+    {
+      "ticker": "005030",
+      "name": "부산주공",
+      "market": "KOSPI",
+      "date": "2023-04-11",
+      "reason": "기타공익과투자자보호및시장관리상"
+    },
+    {
+      "ticker": "121800",
+      "name": "비덴트",
+      "market": "KOSDAQ",
+      "date": "2023-03-31",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "001470",
+      "name": "삼부토건",
+      "market": "KOSPI",
+      "date": "2025-04-01",
+      "reason": "감사의견거절(발행ELW, 발행ETN 포함)"
+    },
+    {
+      "ticker": "065570",
+      "name": "삼영이엔씨",
+      "market": "KOSDAQ",
+      "date": "2025-02-11",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "340930",
+      "name": "성원에너텍",
+      "market": "KOSDAQ",
+      "date": "2026-04-01",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "267080",
+      "name": "세븐브로이맥주",
+      "market": "KONEX",
+      "date": "2025-05-28",
+      "reason": "코넥스 주권 상장폐지 사유발생"
+    },
+    {
+      "ticker": "258830",
+      "name": "세종메디칼",
+      "market": "KOSDAQ",
+      "date": "2024-03-29",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "352770",
+      "name": "셀레스트라",
+      "market": "KOSDAQ",
+      "date": "2025-04-04",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "049180",
+      "name": "셀루메드",
+      "market": "KOSDAQ",
+      "date": "2026-03-17",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "068940",
+      "name": "셀피글로벌",
+      "market": "KOSDAQ",
+      "date": "2023-03-21",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "007720",
+      "name": "소노스퀘어",
+      "market": "KOSDAQ",
+      "date": "2026-06-17",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "238500",
+      "name": "솔루믹스",
+      "market": "KONEX",
+      "date": "2025-04-04",
+      "reason": "코넥스 주권 상장폐지 사유발생"
+    },
+    {
+      "ticker": "276040",
+      "name": "스코넥",
+      "market": "KOSDAQ",
+      "date": "2026-04-07",
+      "reason": "파산신청(발행 ELW 포함)"
+    },
+    {
+      "ticker": "060240",
+      "name": "스타코링크",
+      "market": "KOSDAQ",
+      "date": "2025-04-08",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "269620",
+      "name": "시스웍",
+      "market": "KOSDAQ",
+      "date": "2022-03-23",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "418250",
+      "name": "시큐레터",
+      "market": "KOSDAQ",
+      "date": "2024-04-05",
+      "reason": "상장적격성 실질심사 대상(사유발생)"
+    },
+    {
+      "ticker": "066790",
+      "name": "씨씨에스",
+      "market": "KOSDAQ",
+      "date": "2025-06-23",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "246720",
+      "name": "아스타",
+      "market": "KOSDAQ",
+      "date": "2026-03-24",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "175250",
+      "name": "아이큐어",
+      "market": "KOSDAQ",
+      "date": "2025-08-05",
+      "reason": "상장적격성 실질심사 대상(사유발생)"
+    },
+    {
+      "ticker": "052770",
+      "name": "아이톡시",
+      "market": "KOSDAQ",
+      "date": "2026-03-23",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "309710",
+      "name": "아이티켐",
+      "market": "KOSDAQ",
+      "date": "2026-04-03",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "096610",
+      "name": "알에프세미",
+      "market": "KOSDAQ",
+      "date": "2024-01-19",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "123010",
+      "name": "알엔티엑스",
+      "market": "KOSDAQ",
+      "date": "2026-07-06",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "043100",
+      "name": "알파AI",
+      "market": "KOSDAQ",
+      "date": "2026-04-07",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "217480",
+      "name": "에스디생명공학",
+      "market": "KOSDAQ",
+      "date": "2023-03-22",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "065420",
+      "name": "에스아이리소스",
+      "market": "KOSDAQ",
+      "date": "2026-06-15",
+      "reason": "조회공시 신고시한 위반"
+    },
+    {
+      "ticker": "246250",
+      "name": "에스엘에스바이오",
+      "market": "KOSDAQ",
+      "date": "2025-06-10",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "019490",
+      "name": "엑시큐어하이트론",
+      "market": "KOSPI",
+      "date": "2025-11-24",
+      "reason": "기타공익과투자자보호및시장관리상"
+    },
+    {
+      "ticker": "354200",
+      "name": "엔젠바이오",
+      "market": "KOSDAQ",
+      "date": "2026-06-23",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "183490",
+      "name": "엔지켐생명과학",
+      "market": "KOSDAQ",
+      "date": "2026-03-23",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "182400",
+      "name": "엔케이젠바이오텍코리아",
+      "market": "KOSDAQ",
+      "date": "2024-03-25",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "250930",
+      "name": "예선테크",
+      "market": "KOSDAQ",
+      "date": "2026-06-30",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "212310",
+      "name": "오건에코텍",
+      "market": "KONEX",
+      "date": "2025-04-08",
+      "reason": "코넥스 주권 상장폐지 사유발생"
+    },
+    {
+      "ticker": "244460",
+      "name": "올리패스",
+      "market": "KOSDAQ",
+      "date": "2025-04-08",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "380540",
+      "name": "옵티코어",
+      "market": "KOSDAQ",
+      "date": "2026-03-23",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "299900",
+      "name": "위지윅스튜디오",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "008600",
+      "name": "윌비스",
+      "market": "KOSPI",
+      "date": "2026-03-23",
+      "reason": "감사의견거절(발행ELW, 발행ETN 포함)"
+    },
+    {
+      "ticker": "468760",
+      "name": "유진스팩10호",
+      "market": "KOSDAQ",
+      "date": "2026-06-30",
+      "reason": "SPAC 합병(예비심사청구대상)"
+    },
+    {
+      "ticker": "263050",
+      "name": "유틸렉스",
+      "market": "KOSDAQ",
+      "date": "2026-02-09",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "279060",
+      "name": "이노벡스",
+      "market": "KONEX",
+      "date": "2026-01-23",
+      "reason": "코넥스 주권 상장폐지 사유발생"
+    },
+    {
+      "ticker": "009730",
+      "name": "이렘",
+      "market": "KOSDAQ",
+      "date": "2026-06-19",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "015020",
+      "name": "이스타코",
+      "market": "KOSPI",
+      "date": "2026-03-16",
+      "reason": "감사의견거절(발행ELW, 발행ETN 포함)"
+    },
+    {
+      "ticker": "074610",
+      "name": "이엔플러스",
+      "market": "KOSPI",
+      "date": "2025-04-07",
+      "reason": "기타공익과투자자보호및시장관리상"
+    },
+    {
+      "ticker": "294090",
+      "name": "이오플로우",
+      "market": "KOSDAQ",
+      "date": "2025-03-21",
+      "reason": "상장적격성 실질심사 대상(사유발생)"
+    },
+    {
+      "ticker": "001840",
+      "name": "이화공영",
+      "market": "KOSDAQ",
+      "date": "2025-04-02",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "277410",
+      "name": "인산가",
+      "market": "KOSDAQ",
+      "date": "2026-06-22",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "064090",
+      "name": "인크레더블버즈",
+      "market": "KOSDAQ",
+      "date": "2026-02-09",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "020760",
+      "name": "일진디스플",
+      "market": "KOSPI",
+      "date": "2025-09-12",
+      "reason": "기타공익과투자자보호및시장관리상"
+    },
+    {
+      "ticker": "234920",
+      "name": "자이글",
+      "market": "KOSDAQ",
+      "date": "2025-10-29",
+      "reason": "상장적격성 실질심사 대상(사유발생)"
+    },
+    {
+      "ticker": "023440",
+      "name": "제이스코홀딩스",
+      "market": "KOSDAQ",
+      "date": "2026-03-23",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "348950",
+      "name": "제이알글로벌리츠",
+      "market": "KOSPI",
+      "date": "2026-04-28",
+      "reason": "회생절차개시신청(발행ELW, 발행ETN 포함)"
+    },
+    {
+      "ticker": "412540",
+      "name": "제일엠앤에스",
+      "market": "KOSDAQ",
+      "date": "2025-04-04",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "446840",
+      "name": "지슨",
+      "market": "KOSDAQ",
+      "date": "2026-06-26",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "011000",
+      "name": "진원생명과학",
+      "market": "KOSPI",
+      "date": "2026-06-25",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "009310",
+      "name": "참엔지니어링",
+      "market": "KOSPI",
+      "date": "2026-03-11",
+      "reason": "기타공익과투자자보호"
+    },
+    {
+      "ticker": "013720",
+      "name": "청보",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "284620",
+      "name": "카이노스메드",
+      "market": "KOSDAQ",
+      "date": "2025-08-14",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "006380",
+      "name": "카프로",
+      "market": "KOSPI",
+      "date": "2024-01-26",
+      "reason": "기타공익과투자자보호및시장관리상"
+    },
+    {
+      "ticker": "313760",
+      "name": "캐리",
+      "market": "KOSDAQ",
+      "date": "2026-04-01",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "210120",
+      "name": "캔버스엔",
+      "market": "KOSDAQ",
+      "date": "2026-06-10",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "079190",
+      "name": "케스피온",
+      "market": "KOSDAQ",
+      "date": "2026-06-30",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "106080",
+      "name": "케이이엠텍",
+      "market": "KOSDAQ",
+      "date": "2026-03-12",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "046070",
+      "name": "코다코",
+      "market": "KOSDAQ",
+      "date": "2024-03-21",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "036690",
+      "name": "코맥스",
+      "market": "KOSDAQ",
+      "date": "2024-03-21",
+      "reason": "상장적격성 실질심사 대상(사유발생)"
+    },
+    {
+      "ticker": "082660",
+      "name": "코스나인",
+      "market": "KOSDAQ",
+      "date": "2024-08-07",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "348080",
+      "name": "큐라티스",
+      "market": "KOSDAQ",
+      "date": "2026-07-01",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "377460",
+      "name": "큐에이드",
+      "market": "KOSDAQ",
+      "date": "2023-11-28",
+      "reason": "상장적격성 실질심사 대상(사유발생)"
+    },
+    {
+      "ticker": "346010",
+      "name": "타이드",
+      "market": "KONEX",
+      "date": "2026-04-06",
+      "reason": "코넥스 주권 상장폐지 사유발생"
+    },
+    {
+      "ticker": "073640",
+      "name": "테라사이언스",
+      "market": "KOSDAQ",
+      "date": "2024-03-20",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "258050",
+      "name": "테크트랜스",
+      "market": "KONEX",
+      "date": "2026-03-23",
+      "reason": "코넥스 주권 상장폐지 사유발생"
+    },
+    {
+      "ticker": "051360",
+      "name": "토비스",
+      "market": "KOSDAQ",
+      "date": "2026-06-29",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "079970",
+      "name": "투비소프트",
+      "market": "KOSDAQ",
+      "date": "2025-03-21",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "043220",
+      "name": "티에스넥스젠",
+      "market": "KOSDAQ",
+      "date": "2025-03-31",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "004870",
+      "name": "티웨이홀딩스",
+      "market": "KOSPI",
+      "date": "2026-07-02",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "288330",
+      "name": "파라택시스코리아",
+      "market": "KOSDAQ",
+      "date": "2026-04-08",
+      "reason": "상장폐지 사유발생"
+    },
+    {
+      "ticker": "266350",
+      "name": "팡스카이",
+      "market": "KONEX",
+      "date": "2025-04-07",
+      "reason": "기타 투자자보호"
+    },
+    {
+      "ticker": "327610",
+      "name": "펨토바이오메드",
+      "market": "KONEX",
+      "date": "2026-03-30",
+      "reason": "지정자문인 계약해지"
+    },
+    {
+      "ticker": "006490",
+      "name": "프리티",
+      "market": "KOSPI",
+      "date": "2026-06-25",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "041590",
+      "name": "플래스크",
+      "market": "KOSDAQ",
+      "date": "2024-03-29",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "222670",
+      "name": "플럼라인생명과학",
+      "market": "KONEX",
+      "date": "2026-02-19",
+      "reason": "코넥스 주권 상장폐지 사유발생"
+    },
+    {
+      "ticker": "019570",
+      "name": "플루토스",
+      "market": "KOSDAQ",
+      "date": "2026-07-09",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    },
+    {
+      "ticker": "241820",
+      "name": "피씨엘",
+      "market": "KOSDAQ",
+      "date": "2025-03-24",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "080720",
+      "name": "한국유니온제약",
+      "market": "KOSDAQ",
+      "date": "2024-10-11",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "005110",
+      "name": "한창",
+      "market": "KOSPI",
+      "date": "2024-03-28",
+      "reason": "기타 시장관리상(신주인수권증권 및 증서 제외)(발행ELW, 발행ETN 포함)"
+    },
+    {
+      "ticker": "143210",
+      "name": "핸즈코퍼레이션",
+      "market": "KOSPI",
+      "date": "2026-03-23",
+      "reason": "기타공익과투자자보호및시장관리상"
+    },
+    {
+      "ticker": "016790",
+      "name": "현대사료",
+      "market": "KOSDAQ",
+      "date": "2024-02-29",
+      "reason": "투자자 보호"
+    },
+    {
+      "ticker": "057050",
+      "name": "현대홈쇼핑",
+      "market": "KOSPI",
+      "date": "2026-06-26",
+      "reason": "주식의 병합, 분할 등 전자등록 변경, 말소"
+    }
+  ]
+}

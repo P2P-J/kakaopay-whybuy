@@ -1,0 +1,114 @@
+{
+  "signal": "투자경고",
+  "kind": "krx_investment_warning",
+  "source_name": "한국거래소 시장경보 — 투자경고종목",
+  "source_url": "https://kind.krx.co.kr/investwarn/investattentwarnrisky.do?method=investattentwarnriskyMain",
+  "as_of": "2026-07-10",
+  "rows": [
+    {
+      "ticker": "079650",
+      "name": "서산",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": ""
+    },
+    {
+      "ticker": "372800",
+      "name": "아이티아이즈",
+      "market": "KOSDAQ",
+      "date": "2026-07-08",
+      "reason": ""
+    },
+    {
+      "ticker": "013360",
+      "name": "일성건설",
+      "market": "KOSPI",
+      "date": "2026-07-07",
+      "reason": ""
+    },
+    {
+      "ticker": "092590",
+      "name": "럭스피아",
+      "market": "KONEX",
+      "date": "2026-07-06",
+      "reason": ""
+    },
+    {
+      "ticker": "002990",
+      "name": "금호건설",
+      "market": "KOSPI",
+      "date": "2026-07-01",
+      "reason": ""
+    },
+    {
+      "ticker": "228340",
+      "name": "동양파일",
+      "market": "KOSDAQ",
+      "date": "2026-07-01",
+      "reason": ""
+    },
+    {
+      "ticker": "065170",
+      "name": "비엘팜텍",
+      "market": "KOSDAQ",
+      "date": "2026-07-01",
+      "reason": ""
+    },
+    {
+      "ticker": "270520",
+      "name": "앱튼",
+      "market": "KOSDAQ",
+      "date": "2026-07-01",
+      "reason": ""
+    },
+    {
+      "ticker": "064850",
+      "name": "에프앤가이드",
+      "market": "KOSDAQ",
+      "date": "2026-07-01",
+      "reason": ""
+    },
+    {
+      "ticker": "127120",
+      "name": "제이에스링크",
+      "market": "KOSDAQ",
+      "date": "2026-07-01",
+      "reason": ""
+    },
+    {
+      "ticker": "002995",
+      "name": "금호건설우",
+      "market": "KOSPI",
+      "date": "2026-06-30",
+      "reason": ""
+    },
+    {
+      "ticker": "001210",
+      "name": "금호전기",
+      "market": "KOSPI",
+      "date": "2026-06-30",
+      "reason": ""
+    },
+    {
+      "ticker": "091590",
+      "name": "남화토건",
+      "market": "KOSDAQ",
+      "date": "2026-06-30",
+      "reason": ""
+    },
+    {
+      "ticker": "122350",
+      "name": "삼기",
+      "market": "KOSDAQ",
+      "date": "2026-06-30",
+      "reason": ""
+    },
+    {
+      "ticker": "458870",
+      "name": "씨어스",
+      "market": "KOSDAQ",
+      "date": "2026-06-30",
+      "reason": ""
+    }
+  ]
+}

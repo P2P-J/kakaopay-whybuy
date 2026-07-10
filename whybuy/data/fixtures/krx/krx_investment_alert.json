@@ -1,0 +1,268 @@
+{
+  "signal": "투자주의",
+  "kind": "krx_investment_alert",
+  "source_name": "한국거래소 시장경보 — 투자주의종목",
+  "source_url": "https://kind.krx.co.kr/investwarn/investattentwarnrisky.do?method=investattentwarnriskyMain",
+  "as_of": "2026-07-10",
+  "rows": [
+    {
+      "ticker": "035760",
+      "name": "CJ ENM",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "종가급변"
+    },
+    {
+      "ticker": "418620",
+      "name": "E8",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "218410",
+      "name": "RFHIC",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "290660",
+      "name": "다이나믹솔루션",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "224060",
+      "name": "더코디",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "263800",
+      "name": "데이타솔루션",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "투자경고 지정예고"
+    },
+    {
+      "ticker": "214680",
+      "name": "디알텍",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "081660",
+      "name": "미스토홀딩스",
+      "market": "KOSPI",
+      "date": "2026-07-10",
+      "reason": "종가급변"
+    },
+    {
+      "ticker": "452200",
+      "name": "민테크",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "008470",
+      "name": "부스타",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "148780",
+      "name": "비큐AI",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "223310",
+      "name": "사토시홀딩스",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "029780",
+      "name": "삼성카드",
+      "market": "KOSPI",
+      "date": "2026-07-10",
+      "reason": "종가급변"
+    },
+    {
+      "ticker": "084180",
+      "name": "수성웹툰",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "291650",
+      "name": "압타머사이언스",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "291650",
+      "name": "압타머사이언스",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "매매관여과다종목"
+    },
+    {
+      "ticker": "005850",
+      "name": "에스엘",
+      "market": "KOSPI",
+      "date": "2026-07-10",
+      "reason": "종가급변"
+    },
+    {
+      "ticker": "460870",
+      "name": "에스엠씨지",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "종가급변"
+    },
+    {
+      "ticker": "012750",
+      "name": "에스원",
+      "market": "KOSPI",
+      "date": "2026-07-10",
+      "reason": "종가급변"
+    },
+    {
+      "ticker": "012750",
+      "name": "에스원",
+      "market": "KOSPI",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "050760",
+      "name": "에스폴리텍",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "038870",
+      "name": "에코심플렉스",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "투자경고 지정예고"
+    },
+    {
+      "ticker": "038870",
+      "name": "에코심플렉스",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "단일계좌거래량"
+    },
+    {
+      "ticker": "018620",
+      "name": "우진비앤지",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "매매관여과다종목"
+    },
+    {
+      "ticker": "018620",
+      "name": "우진비앤지",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "043590",
+      "name": "웰킵스하이텍",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "매매관여과다종목"
+    },
+    {
+      "ticker": "043590",
+      "name": "웰킵스하이텍",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "단일계좌거래량"
+    },
+    {
+      "ticker": "216400",
+      "name": "인바이츠바이오코아",
+      "market": "KONEX",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "071200",
+      "name": "인피니트헬스케어",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "030000",
+      "name": "제일기획",
+      "market": "KOSPI",
+      "date": "2026-07-10",
+      "reason": "종가급변"
+    },
+    {
+      "ticker": "216080",
+      "name": "제테마",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "040350",
+      "name": "크레오에스지",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "214150",
+      "name": "클래시스",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "종가급변"
+    },
+    {
+      "ticker": "217880",
+      "name": "틸론",
+      "market": "KONEX",
+      "date": "2026-07-10",
+      "reason": "종가급변"
+    },
+    {
+      "ticker": "304840",
+      "name": "피플바이오",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "291810",
+      "name": "핀텔",
+      "market": "KOSDAQ",
+      "date": "2026-07-10",
+      "reason": "소수지점/계좌"
+    },
+    {
+      "ticker": "047810",
+      "name": "한국항공우주",
+      "market": "KOSPI",
+      "date": "2026-07-10",
+      "reason": "종가급변"
+    }
+  ]
+}
