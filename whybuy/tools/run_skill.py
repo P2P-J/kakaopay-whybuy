@@ -457,6 +457,82 @@ def run_audit(case_id: str, as_of: str | None, mirror: bool, commit: bool) -> di
             "committed": commit and not violations}
 
 
+# ── 매수 전 점검 (prebuy_check, G10) ──────────────────────────────
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "mcp"))
+import krx_client as kx  # noqa: E402
+import prebuy_check as pc  # noqa: E402
+
+
+def _prebuy_facts(corp_code: str, as_of: str) -> dict:
+    """짚이는 사실이 없을 때 제시하는 확인 가능한 사실 — 시가총액은 제외(가격 격리).
+
+    감사의견·연속 영업흑자·배당 이력·업력 — 전부 공시 기반, 시세 미사용."""
+    facts = {}
+    audit = dc.get_report_item(corp_code, "audit_opinion", as_of)
+    if audit.get("status") == "ok":
+        row = audit["years"][max(audit["years"])][0]
+        rcp = row.get("rcept_no", "")
+        facts["audit"] = {"opinion": row.get("adt_opinion", ""),
+                          "url": f"https://dart.fss.or.kr/dsaf001/main.do?rcpNo={rcp}"}
+    streak = 0
+    for v in pc._op_series(corp_code, as_of):     # 최신순 영업이익
+        if v is not None and v > 0:
+            streak += 1
+        else:
+            break
+    facts["profit_streak"] = streak
+    div = dc.get_report_item(corp_code, "dividend", as_of)
+    if div.get("status") == "ok":
+        row = next((r for r in div["years"][max(div["years"])]
+                    if "주당" in r.get("se", "") and "현금배당금" in r.get("se", "")
+                    and r.get("thstrm") not in (None, "-", "")), None)
+        if row:
+            facts["dividend"] = {"value": f"주당 현금배당금 {row['thstrm']}원",
+                                 "url": f"https://dart.fss.or.kr/dsaf001/main.do?rcpNo={row.get('rcept_no','')}"}
+    corp_f = FIX / "corp" / f"{corp_code}.json"
+    if corp_f.exists():
+        est = json.loads(corp_f.read_text(encoding="utf-8")).get("est_dt", "")
+        if est:
+            facts["established"] = est[:4]
+    return facts
+
+
+def build_prebuy(ticker: str, as_of: str | None = None) -> dict:
+    """매수 전 점검 파이프라인(저장·게이트 제외). 층1 KRX(ticker 기반) + 층2·3 DART 스캔.
+
+    KRX 층1은 corp 픽스처와 무관하게 종목코드로 조회한다. DART(층2·3)는 corp 픽스처가 있어야
+    스캔되며, 없으면 dart_scope=False로 두고 그 사실을 브리핑에 정직하게 표기(라이브 모드 필요).
+    """
+    as_of = as_of or kx.snapshot_date()           # 명단 기준일 = "지금"(사기 전)
+    krx = kx.risk_flags(ticker)
+    layer1 = [{"layer": 1, "type": "krx", "label": f["signal"], "detail": f["reason"],
+               "source_kind": "KRX", "source_name": f["source_name"], "source_url": f["source_url"],
+               "as_of": f["as_of"], "date": f["date"]} for f in krx]
+
+    corp = dc.resolve_corp(ticker)
+    dart_scope = corp.get("status") != "absent"
+    if dart_scope:
+        corp_code, corp_name = corp["corp_code"], corp["corp_name"]
+        signals = layer1 + pc.scan_financial_risk(corp_code, as_of) + pc.scan_governance_risk(corp_code, as_of)
+        facts = {} if signals else _prebuy_facts(corp_code, as_of)
+    else:
+        corp_name = krx[0]["name"] if krx else ticker
+        signals, facts = layer1, {}
+    return {"ticker": ticker, "corp_name": corp_name, "as_of": as_of, "dart_scope": dart_scope,
+            "signals": signals, "facts": facts, "has_signals": bool(signals)}
+
+
+def run_prebuy(ticker: str, as_of: str | None = None) -> dict:
+    ctx = build_prebuy(ticker, as_of)
+    md = rnd.render_prebuy(ctx)
+    violations = gate_check(md)
+    out_dir = ROOT / "reports" / "prebuy"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    path = out_dir / f"{ticker}-{ctx['as_of']}.md"
+    path.write_text(md, encoding="utf-8")
+    return {"path": str(path), "violations": violations, "briefing": md, "has_signals": ctx["has_signals"]}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(prog="run_skill")
     sub = ap.add_subparsers(dest="skill", required=True)
@@ -476,6 +552,9 @@ def main() -> int:
     a.add_argument("--as-of", default=None)
     a.add_argument("--mirror", action="store_true")
     a.add_argument("--commit", action="store_true")
+    p = sub.add_parser("prebuy")
+    p.add_argument("--ticker", required=True)
+    p.add_argument("--as-of", default=None)
     args = ap.parse_args()
 
     if args.skill == "timeline":
@@ -505,6 +584,16 @@ def main() -> int:
                 print(f"  - {v}")
             return 1
         print(f"게이트 PASS{' · audits[] 기록됨' if res['committed'] else ''}")
+        return 0
+    if args.skill == "prebuy":
+        res = run_prebuy(args.ticker, args.as_of)
+        print(f"저장: {res['path']} · {'주의 항목 있음' if res['has_signals'] else '주의 항목 없음'}")
+        if res["violations"]:
+            print("게이트 위반:")
+            for v in res["violations"]:
+                print(f"  - {v}")
+            return 1
+        print("게이트 PASS")
         return 0
     return 2
 

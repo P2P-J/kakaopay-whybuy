@@ -59,6 +59,24 @@ def gloss(text: str) -> str:
     return ""
 
 
+# ── 매수 전 점검 (prebuy_check, G10) — 표현 규칙(아엔): "위험 신호" 앞세우지 않고 중립 표현 ──
+# 묶음 제목은 "위험 신호"가 아니라 중립. 판단이 아니라 공식 기록의 사실 전달임을 명시.
+PREBUY_SECTION_TITLE = "주의 깊게 볼 만한 공식 기록"
+PREBUY_NO_JUDGMENT = "이는 공식 기록의 사실이며 위험 여부 판단은 제공하지 않습니다."
+# 층위별 근거 차이(아엔): DART=rcp 정밀 원문 링크, KRX=명단 출처. 왜 다른지 정직하게 한 줄.
+PREBUY_KRX_SOURCE_NOTE = "거래소 지정 조치는 개별 공시 원문이 제공되지 않아 명단 출처로 표기합니다."
+# 짚이는 사실이 없을 때(존재의 정직 — 없으면 없다)
+PREBUY_CLEAN = "공식 기록상 주의 항목: 발견되지 않았습니다."
+PREBUY_FACTS_DISCLAIMER = "이는 사실 제시이며 '우량하다·사도 된다'는 판단이 아닙니다."
+# 데모 픽스처 밖 종목(재무·지배구조 DART 미보유)일 때 정직 표기
+PREBUY_DART_OUT_OF_SCOPE = "재무·지배구조(DART 공시) 항목은 이 데모 픽스처 범위 밖이라 확인하지 않았습니다 — 라이브 모드에서 조회됩니다."
+
+
+def prebuy_asof_notice(as_of: str) -> str:
+    """매수 전 점검 상단 기준일 문구. KRX 명단은 시점 스냅샷이라 기준일이 특히 중요."""
+    return f"이 점검은 {as_of} 거래소 명단 기준입니다."
+
+
 def as_of_notice(as_of: str) -> str:
     """데이터 기준일 문구를 생성한다."""
     return AS_OF_NOTICE_TEMPLATE.format(as_of=as_of)

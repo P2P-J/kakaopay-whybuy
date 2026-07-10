@@ -73,3 +73,35 @@ def test_ktg_governance_flags_major_change():
 # ── 가격 격리 ──
 def test_price_isolation():
     assert "price" not in inspect.getsource(pc).lower()
+
+
+# ── Task 4: 파이프라인 + render + 게이트 ──
+import run_skill as rs  # noqa: E402
+import render as rnd  # noqa: E402
+from compliance_gate import check as gate_check  # noqa: E402
+
+
+def test_build_prebuy_kakao_clean_with_facts():
+    ctx = rs.build_prebuy("035720")
+    assert ctx["has_signals"] is False
+    assert ctx["facts"].get("profit_streak", 0) >= 4     # 연속 흑자 사실
+    assert ctx["facts"].get("audit")                      # 감사의견 사실
+
+def test_build_prebuy_krx_signals_ticker_based():
+    ctx = rs.build_prebuy("368970")                       # 오에스피 — corp 픽스처 밖
+    assert ctx["has_signals"] is True
+    assert ctx["dart_scope"] is False                     # DART 범위 밖
+    assert any(s["source_kind"] == "KRX" and s["label"] == "관리종목" for s in ctx["signals"])
+
+def test_prebuy_no_market_cap_price_data():
+    # 시가총액 순위는 가격 데이터라 뺐다 — 브리핑에 순위·시총 없음
+    md = rnd.render_prebuy(rs.build_prebuy("035720"))
+    assert "시가총액" not in md and "시총" not in md
+
+def test_prebuy_gate_passes_all_paths():
+    for tk in ["035720", "368970", "033780"]:            # 없음·KRX있음·DART있음
+        assert gate_check(rnd.render_prebuy(rs.build_prebuy(tk))) == [], tk
+
+def test_prebuy_layer_source_distinction():
+    md = rnd.render_prebuy(rs.build_prebuy("368970"))
+    assert "[KRX]" in md and "개별 공시 원문이 제공되지 않아" in md   # KRX 출처 표기 + 차이 명시

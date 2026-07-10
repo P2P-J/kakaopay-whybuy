@@ -38,6 +38,7 @@ def risk_flags(ticker: str) -> list[dict]:
             if r["ticker"] == ticker:
                 out.append({
                     "signal": d["signal"],
+                    "name": r.get("name", ""),
                     "source_name": d["source_name"],
                     "source_url": d["source_url"],
                     "as_of": d["as_of"],

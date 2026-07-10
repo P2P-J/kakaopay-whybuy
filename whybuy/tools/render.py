@@ -156,6 +156,60 @@ def render_mirror(ctx: dict) -> str:
     return "\n".join(L) + "\n"
 
 
+def render_prebuy(ctx: dict) -> str:
+    """매수 전 점검 브리핑. 존재의 정직(있으면 있다/없으면 없다) + 층위별 근거 구분.
+
+    DART 신호(층2·3)는 rcp 원문 링크, KRX 신호(층1)는 명단 출처+기준일 + 왜 링크가
+    다른지 한 줄. "위험 신호" 단어 앞세우지 않고 공식 명칭 + 판단 아님 명시(표현 규칙).
+    """
+    L = [f"# {ctx['corp_name']}({ctx['ticker']}) 매수 전 점검", ""]
+    L.append(f"> {ts.as_of_notice(ctx['as_of'])}")
+    L.append(f"> {ts.prebuy_asof_notice(ctx['as_of'])}")     # KRX 명단은 시점 스냅샷 — 기준일 강조
+    L.append("")
+
+    L.append(f"## {ts.PREBUY_SECTION_TITLE}")
+    if ctx["has_signals"]:
+        has_krx = False
+        for s in ctx["signals"]:
+            line = f"- {s['label']}"
+            if s.get("detail"):
+                line += f": {s['detail']}"
+            if s["source_kind"] == "KRX":
+                has_krx = True
+                line += f" · 출처: {s['source_name']}, {s['as_of']} 기준 [KRX]({s['source_url']})"
+            else:
+                url = s.get("evidence", {}).get("url", "")
+                if url:
+                    line += f" [원문]({url})"
+            L.append(line + ts.gloss(s.get("detail", "") + s["label"]))
+        if has_krx:
+            L.append(f"> {ts.PREBUY_KRX_SOURCE_NOTE}")
+        L.append(f"> {ts.PREBUY_NO_JUDGMENT}")
+    else:
+        L.append(f"- {ts.PREBUY_CLEAN} ({ctx['as_of']} 거래소 명단 기준)")
+    if not ctx.get("dart_scope", True):
+        L.append(f"> {ts.PREBUY_DART_OUT_OF_SCOPE}")
+    L.append("")
+
+    if not ctx["has_signals"] and ctx.get("facts"):
+        L.append("## 참고로 확인 가능한 사실")
+        f = ctx["facts"]
+        if f.get("audit"):
+            L.append(f"- 최근 감사의견: {f['audit']['opinion']} [원문]({f['audit']['url']})")
+        if f.get("profit_streak"):
+            L.append(f"- 최근 {f['profit_streak']}분기 연속 영업흑자")
+        if f.get("dividend"):
+            L.append(f"- 배당: {f['dividend']['value']} [원문]({f['dividend']['url']})")
+        if f.get("established"):
+            L.append(f"- 업력: {f['established']}년 설립")
+        L.append(f"> {ts.PREBUY_FACTS_DISCLAIMER}")
+        L.append("")
+
+    L.append("---")
+    L.append(ts.DISCLAIMER)
+    return "\n".join(L) + "\n"
+
+
 def render_recall_confirm(recall: dict, reasons: list[dict]) -> str:
     """reason-recall 선택 확인 브리핑. 사용자가 고른 논거를 사실로 되읽어준다(판정 없음)."""
     L = []
