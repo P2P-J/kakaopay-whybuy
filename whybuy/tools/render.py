@@ -184,7 +184,6 @@ def render_prebuy(ctx: dict) -> str:
             L.append(line + ts.gloss(s.get("detail", "") + s["label"]))
         if has_krx:
             L.append(f"> {ts.PREBUY_KRX_SOURCE_NOTE}")
-        L.append(f"> {ts.PREBUY_NO_JUDGMENT}")
     else:
         L.append(f"- {ts.PREBUY_CLEAN} ({ctx['as_of']} 거래소 명단 기준)")
     if not ctx.get("dart_scope", True):
@@ -202,8 +201,10 @@ def render_prebuy(ctx: dict) -> str:
             L.append(f"- 배당: {f['dividend']['value']} [원문]({f['dividend']['url']})")
         if f.get("established"):
             L.append(f"- 업력: {f['established']}년 설립")
-        L.append(f"> {ts.PREBUY_FACTS_DISCLAIMER}")
         L.append("")
+
+    L.append(f"> {ts.PREBUY_DISCLAIMER}")     # 있음/없음 공통 단일 면책 문구
+    L.append("")
 
     L.append("---")
     L.append(ts.DISCLAIMER)

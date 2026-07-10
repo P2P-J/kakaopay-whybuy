@@ -105,3 +105,17 @@ def test_prebuy_gate_passes_all_paths():
 def test_prebuy_layer_source_distinction():
     md = rnd.render_prebuy(rs.build_prebuy("368970"))
     assert "[KRX]" in md and "개별 공시 원문이 제공되지 않아" in md   # KRX 출처 표기 + 차이 명시
+
+
+def test_prebuy_disclaimer_unified_no_valuation_word():
+    # 면책은 3경로 공통 단일 상수, '우량' 등 판정 단어 없음
+    import textstore as ts
+    assert "우량" not in ts.PREBUY_DISCLAIMER
+    for tk in ["035720", "368970", "033780"]:
+        assert ts.PREBUY_DISCLAIMER in rnd.render_prebuy(rs.build_prebuy(tk))
+
+
+def test_golden_prebuy_kakao():
+    md = rnd.render_prebuy(rs.build_prebuy("035720"))
+    golden = open(os.path.join(os.path.dirname(__file__), "golden", "prebuy-035720.md"), encoding="utf-8").read()
+    assert md == golden, "카카오 매수 전 점검 브리핑이 골든과 다름 (픽스처/템플릿 변경 시 아엔 승인 후 갱신)"
