@@ -48,8 +48,9 @@ bash tools/build_submission.sh dist --cleanroom
 - **`git archive HEAD:whybuy` → src** — 추적 파일만 뽑히므로 `.venv`·`venv`·`.env`·
   `*.pyc`·`__pycache__`·`.pytest_cache`·`data/cache`가 구조적으로 자동 제외된다.
   수동 `--exclude` 불필요, ZIP이 어느 커밋 기준인지도 명확(HEAD).
-- **README 2개** — 루트 `README.md`(제출 안내·검증 재현·실로드 정직 고지) +
-  `src/README.md`(플러그인 설치·스킬 4종·MCP 등록). 역할 분리, 내용 중복 없음.
+- **문서 3개** — 루트 `README.md`(제출 안내·검증 재현·실로드 정직 고지) +
+  `HOW_TO_USE.md`(명령+실제 출력 대조 실행 안내서) + `src/README.md`(플러그인 설치·
+  스킬 4종·MCP 등록). 역할 분리, 내용 중복 없음.
 - **logs/claude-code/** — 저장소 루트 정본 세션 로그(원본, 편집 없음)만 담는다.
 - **src/verification/** — 개발 검증 산출물(final-verification.txt·link-check.txt).
   `logs`라는 이름은 대화 로그 전용으로 비워둠(심사 혼동 방지).

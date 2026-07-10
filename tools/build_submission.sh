@@ -35,6 +35,7 @@ rm -rf "$OUT/submission"
 mkdir -p "$OUT/submission/src" "$OUT/submission/logs/claude-code"
 git -C "$REPO" archive HEAD:whybuy | tar -x -C "$OUT/submission/src"
 git -C "$REPO" show HEAD:README.md > "$OUT/submission/README.md"
+git -C "$REPO" show HEAD:HOW_TO_USE.md > "$OUT/submission/HOW_TO_USE.md"
 
 echo "== 2) 대화 로그 복사 (저장소 루트 정본) =="
 shopt -s nullglob
@@ -80,7 +81,7 @@ for n in names:
     kh += [(n,'40hex') for _ in re.findall(r'\b[0-9a-f]{40}\b', d)]
 if kh: ok=False; print(f"   ✗ 키 노출: {kh[:5]}")
 # 필수 구조
-req=['submission/README.md','submission/src/.codex-plugin/plugin.json','submission/src/.mcp.json','submission/src/README.md']
+req=['submission/README.md','submission/HOW_TO_USE.md','submission/src/.codex-plugin/plugin.json','submission/src/.mcp.json','submission/src/README.md']
 for r in req:
     if r not in names: ok=False; print(f"   ✗ 필수 파일 없음: {r}")
 skills=sorted(set(n.split('/')[3] for n in names if n.startswith('submission/src/skills/') and n.count('/')>=4))
