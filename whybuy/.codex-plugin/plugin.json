@@ -1,8 +1,9 @@
 {
   "name": "whybuy",
-  "version": "1.0.0",
-  "description": "매수일 앵커로 공시 사실을 재정렬하고 매수 논거를 공시 원문으로 판정하는 국내 상장주식 전용 플러그인 (왜샀지). 추천하지 않고 판정한다.",
+  "version": "1.1.0",
+  "description": "매수 전 공식 기록 점검부터 매수일 앵커 재정렬·논거 재구성·논거 판정까지, 국내 상장주식을 공시 원문·거래소 명단으로 다루는 플러그인 (왜샀지). 추천하지 않고 사실을 전달한다.",
   "skills": [
+    { "name": "prebuy-check", "path": "skills/prebuy-check/SKILL.md" },
     { "name": "buy-timeline", "path": "skills/buy-timeline/SKILL.md" },
     { "name": "reason-recall", "path": "skills/reason-recall/SKILL.md" },
     { "name": "thesis-audit", "path": "skills/thesis-audit/SKILL.md" }

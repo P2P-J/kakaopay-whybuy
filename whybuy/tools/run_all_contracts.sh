@@ -7,6 +7,11 @@ cd "$(dirname "$0")/.."
 PY=.venv/bin/python
 fail=0
 
+echo "== prebuy-check =="
+$PY -m tools.run_skill prebuy --ticker 035720 >/dev/null || fail=1   # 카카오 — 없음 경로
+$PY -m tools.run_skill prebuy --ticker 368970 >/dev/null || fail=1   # 오에스피 — KRX 층1 있음
+$PY -m tools.run_skill prebuy --ticker 033780 >/dev/null || fail=1   # KT&G — DART 층3 있음
+
 echo "== buy-timeline =="
 for c in case-001 case-002 case-003; do
   $PY -m tools.run_skill timeline --case "$c" >/dev/null || fail=1
@@ -24,7 +29,8 @@ for c in case-001 case-002 case-003; do
 done
 
 echo "== 산출물 게이트 재검사 =="
-for f in reports/case-00*/*.md; do
+for f in reports/case-00*/*.md reports/prebuy/*.md; do
+  [ -f "$f" ] || continue
   $PY tools/compliance_gate.py "$f" >/dev/null || { echo "게이트 실패: $f"; fail=1; }
 done
 

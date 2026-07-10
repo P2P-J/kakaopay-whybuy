@@ -15,6 +15,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "tools"))
 import dart_client as dc  # noqa: E402
+import krx_client as kx  # noqa: E402
 import ledger_store as ls  # noqa: E402
 import compliance_gate as cgate  # noqa: E402
 
@@ -74,6 +75,10 @@ def _gate_check(a):
     return {"status": "pass" if not violations else "blocked", "violations": violations}
 
 
+def _krx_risk_flags(a):
+    return {"ticker": a["ticker"], "as_of": kx.snapshot_date(), "flags": kx.risk_flags(a["ticker"])}
+
+
 _DATE = {"type": "string", "pattern": r"^\d{4}-\d{2}-\d{2}$"}
 
 TOOLS = [
@@ -120,6 +125,9 @@ TOOLS = [
     {"name": "gate_check", "handler": _gate_check,
      "description": "브리핑 컴플라이언스 게이트 검사 (pass/fail + 위반)",
      "schema": {"type": "object", "required": ["text"], "properties": {"text": {"type": "string"}}}},
+    {"name": "krx_risk_flags", "handler": _krx_risk_flags,
+     "description": "종목의 KRX 층1 시장조치 신호(관리종목·매매거래정지·투자경고·불성실공시 등) + 명단 기준일",
+     "schema": {"type": "object", "required": ["ticker"], "properties": {"ticker": {"type": "string"}}}},
 ]
 
 _BY_NAME = {t["name"]: t for t in TOOLS}

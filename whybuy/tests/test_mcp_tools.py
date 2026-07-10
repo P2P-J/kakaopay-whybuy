@@ -112,3 +112,13 @@ def test_gate_check_pass():
 def test_gate_check_blocked():
     r = d("gate_check", text="지금 파세요.")
     assert r["status"] == "blocked" and r["violations"]
+
+
+# ── krx_risk_flags (G10) ──
+def test_krx_risk_flags_designated():
+    r = d("krx_risk_flags", ticker="368970")     # 오에스피 — 관리종목 등
+    assert r["as_of"] == "2026-07-10"
+    assert any(f["signal"] == "관리종목" for f in r["flags"])
+
+def test_krx_risk_flags_clean():
+    assert d("krx_risk_flags", ticker="035720")["flags"] == []   # 카카오 무신호
