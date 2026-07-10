@@ -497,38 +497,53 @@ def _prebuy_facts(corp_code: str, as_of: str) -> dict:
     return facts
 
 
-def build_prebuy(ticker: str, as_of: str | None = None) -> dict:
-    """매수 전 점검 파이프라인(저장·게이트 제외). 층1 KRX(ticker 기반) + 층2·3 DART 스캔.
+def _resolve_target(query: str) -> tuple[str, str, str | None]:
+    """입력(티커 or 종목명) → 정식 (ticker, corp_name, corp_code|None).
 
-    KRX 층1은 corp 픽스처와 무관하게 종목코드로 조회한다. DART(층2·3)는 corp 픽스처가 있어야
-    스캔되며, 없으면 dart_scope=False로 두고 그 사실을 브리핑에 정직하게 표기(라이브 모드 필요).
+    파이프라인 입구의 단일 정규화 지점. corp 픽스처(DART, resolve_corp)를 먼저 물리고,
+    거기 없으면 KRX 명단(krx_client.resolve)으로, 그래도 없으면 입력 그대로 둔다.
+    → 이름 입력이든 티커 입력이든 이후 모든 조회가 동일한 정식 코드/티커로 수행된다."""
+    corp = dc.resolve_corp(query)
+    if corp.get("status") != "absent":
+        return corp["ticker"], corp["corp_name"], corp["corp_code"]
+    t, nm = kx.resolve(query)
+    if t:
+        return t, nm, None
+    q = query.strip()
+    return q, q, None
+
+
+def build_prebuy(query: str, as_of: str | None = None) -> dict:
+    """매수 전 점검 파이프라인(저장·게이트 제외). 입구에서 티커/종목명을 정식 코드로 정규화한 뒤
+    층1 KRX(정식 티커) + 층2·3 DART(정식 corp_code) 스캔.
+
+    corp 픽스처가 없으면(예: KRX 전용 종목) dart_scope=False로 두고 그 사실을 브리핑에 정직하게
+    표기(라이브 모드 필요). 이름/티커 어느 쪽으로 들어와도 제목·조회·산출물이 완전히 동일하다.
     """
     as_of = as_of or kx.snapshot_date()           # 명단 기준일 = "지금"(사기 전)
+    ticker, corp_name, corp_code = _resolve_target(query)
     krx = kx.risk_flags(ticker)
     layer1 = [{"layer": 1, "type": "krx", "label": f["signal"], "detail": f["reason"],
                "source_kind": "KRX", "source_name": f["source_name"], "source_url": f["source_url"],
                "as_of": f["as_of"], "date": f["date"]} for f in krx]
 
-    corp = dc.resolve_corp(ticker)
-    dart_scope = corp.get("status") != "absent"
+    dart_scope = corp_code is not None
     if dart_scope:
-        corp_code, corp_name = corp["corp_code"], corp["corp_name"]
         signals = layer1 + pc.scan_financial_risk(corp_code, as_of) + pc.scan_governance_risk(corp_code, as_of)
         facts = {} if signals else _prebuy_facts(corp_code, as_of)
     else:
-        corp_name = krx[0]["name"] if krx else ticker
         signals, facts = layer1, {}
     return {"ticker": ticker, "corp_name": corp_name, "as_of": as_of, "dart_scope": dart_scope,
             "signals": signals, "facts": facts, "has_signals": bool(signals)}
 
 
-def run_prebuy(ticker: str, as_of: str | None = None) -> dict:
-    ctx = build_prebuy(ticker, as_of)
+def run_prebuy(query: str, as_of: str | None = None) -> dict:
+    ctx = build_prebuy(query, as_of)
     md = rnd.render_prebuy(ctx)
     violations = gate_check(md)
     out_dir = ROOT / "reports" / "prebuy"
     out_dir.mkdir(parents=True, exist_ok=True)
-    path = out_dir / f"{ticker}-{ctx['as_of']}.md"
+    path = out_dir / f"{ctx['ticker']}-{ctx['as_of']}.md"    # 정식 티커 기준(이름 입력도 동일 파일)
     path.write_text(md, encoding="utf-8")
     return {"path": str(path), "violations": violations, "briefing": md, "has_signals": ctx["has_signals"]}
 
@@ -553,7 +568,8 @@ def main() -> int:
     a.add_argument("--mirror", action="store_true")
     a.add_argument("--commit", action="store_true")
     p = sub.add_parser("prebuy")
-    p.add_argument("--ticker", required=True)
+    p.add_argument("--ticker", required=True, metavar="티커|종목명",
+                   help="종목코드(035720) 또는 종목명(카카오) — 입구에서 정식 코드로 정규화")
     p.add_argument("--as-of", default=None)
     args = ap.parse_args()
 

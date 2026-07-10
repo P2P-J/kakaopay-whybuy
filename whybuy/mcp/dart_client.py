@@ -39,19 +39,32 @@ def _live_guard():
 
 
 # ── corp 매핑 ─────────────────────────────────────────────────────
+def _norm_name(s: str) -> str:
+    """회사명 정규화: 주식회사 마커·공백 제거 + 소문자화. 이름 입력 관용 처리용
+    (예: '카카오'·'(주)카카오'·'삼성전자(주)' → 같은 키)."""
+    s = s.strip()
+    for m in ("주식회사", "(주)", "㈜", "(유)"):
+        s = s.replace(m, "")
+    return s.replace(" ", "").lower()
+
+
 def _corp_index() -> dict:
     idx = {}
     for f in (FIX / "corp").glob("*.json"):
         d = json.loads(f.read_text(encoding="utf-8"))
         idx[d["stock_code"]] = d
         idx[d["corp_name"]] = d
+        idx.setdefault(_norm_name(d["corp_name"]), d)   # 정규화 이름('카카오' 등)
     return idx
 
 
 def resolve_corp(query: str) -> dict:
-    """ticker 또는 회사명 → {corp_code, corp_name, ticker, market}. 미발견 시 absent."""
+    """ticker 또는 회사명 → {corp_code, corp_name, ticker, market}. 미발견 시 absent.
+
+    회사명은 주식회사 마커 유무와 무관하게 정규화 매칭한다('카카오' == '(주)카카오')."""
     _live_guard()
-    d = _corp_index().get(query.strip())
+    idx = _corp_index()
+    d = idx.get(query.strip()) or idx.get(_norm_name(query))
     if not d:
         return {"status": "absent", "query": query}
     return {"corp_code": d["corp_code"], "corp_name": d["corp_name"],

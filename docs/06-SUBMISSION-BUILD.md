@@ -41,7 +41,7 @@ bash tools/build_submission.sh dist --cleanroom
 ```
 
 `dist/submission.zip` 이 제출본이다. 스크립트가 재검사 PASS를 찍고, `--cleanroom`이
-**키 없는 새 환경에서 181 passed + 컨트랙트 PASS**를 재현하면 자립성까지 확정된다.
+**키 없는 새 환경에서 185 passed + 컨트랙트 PASS**를 재현하면 자립성까지 확정된다.
 
 ## 빌드 방식 (요점)
 
@@ -59,7 +59,7 @@ bash tools/build_submission.sh dist --cleanroom
 
 - ZIP 내부: 제외대상 0 · `.env` 0 · 키 노출 0 · 필수구조(plugin.json·.mcp.json·
   skills 4종·logs 3세션) 완비.
-- 깨끗한 환경(저장소 밖, 새 venv, **키 없음**): **pytest 181 passed** · 컨트랙트
+- 깨끗한 환경(저장소 밖, 새 venv, **키 없음**): **pytest 185 passed** · 컨트랙트
   3종×3케이스 PASS · validator 2종 통과 · 데모 막4 산출물 생성 + 게이트 PASS.
 
 → 구조·동작·자립 재현 전부 검증됨. 남은 건 최종 준비 후 세션 정리하고 이 절차대로

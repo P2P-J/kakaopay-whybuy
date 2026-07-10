@@ -24,13 +24,17 @@ pip install -r requirements.txt                   # 또는: uv pip install -r re
 
 ## 1. 매수 전 점검 (prebuy-check) — "사기 전에 알아둘 게 있나?"
 
+> **종목명만 넣으면 된다.** `--ticker`는 종목코드(`035720`)든 종목명(`카카오`)이든 받아,
+> 파이프라인 입구에서 정식 종목코드로 정규화한다. **이름 입력과 티커 입력은 제목·산출물이
+> 완전히 동일**하다(초보자가 코드를 몰라도 된다는 게 이 제품의 정체성). 아래는 이름 기준.
+
 ### (a) 위험 신호가 **없는** 종목 — 카카오
 
 ```bash
-.venv/bin/python -m tools.run_skill prebuy --ticker 035720
+.venv/bin/python -m tools.run_skill prebuy --ticker 카카오      # --ticker 035720 과 동일
 ```
 
-터미널:
+터미널(이름으로 쳐도 정식 티커 035720 파일로 저장된다):
 ```
 저장: reports/prebuy/035720-2026-07-10.md · 주의 항목 없음
 게이트 PASS
@@ -61,8 +65,8 @@ pip install -r requirements.txt                   # 또는: uv pip install -r re
 ### (b) 위험 신호가 **있는** 종목 — 오에스피(거래소 명단), 케이티앤지(DART 지배구조)
 
 ```bash
-.venv/bin/python -m tools.run_skill prebuy --ticker 368970    # 오에스피 — 거래소 층1
-.venv/bin/python -m tools.run_skill prebuy --ticker 033780    # 케이티앤지 — DART 층3
+.venv/bin/python -m tools.run_skill prebuy --ticker 오에스피     # 거래소 층1 (= --ticker 368970)
+.venv/bin/python -m tools.run_skill prebuy --ticker 케이티앤지   # DART 층3   (= --ticker 033780)
 ```
 
 오에스피 산출물 발췌:
@@ -218,7 +222,7 @@ pip install -r requirements.txt                   # 또는: uv pip install -r re
 ### (a) 전체 테스트 & 컨트랙트
 
 ```bash
-.venv/bin/python -m pytest -q             # → 181 passed
+.venv/bin/python -m pytest -q             # → 185 passed
 bash tools/run_all_contracts.sh           # → 컨트랙트 3종 × 3케이스 전부 PASS
 ```
 
@@ -274,7 +278,7 @@ gate_check · krx_risk_flags
 
 | # | 캡처 | 어느 명령의 출력에서 뜨나 |
 |---|---|---|
-| 1 | **매수 전 점검** | `run_skill prebuy --ticker 035720`(없음) + `368970`/`033780`(있음) |
+| 1 | **매수 전 점검** | `run_skill prebuy --ticker 카카오`(없음) + `오에스피`/`케이티앤지`(있음) — 이름·티커 동일 |
 | 2 | **타임라인** | `run_skill timeline --case case-001` 산출물 |
 | 3 | **거울 브리핑** | `run_skill audit --case case-002 --mirror`(반증 킬러) + `case-001`(유효) |
 | 4 | **게이트 차단** | `compliance_gate.py tests/gate/negative/sample_reco.md` (BLOCKED 3건) |

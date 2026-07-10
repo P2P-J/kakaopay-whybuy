@@ -27,6 +27,19 @@ def snapshot_date() -> str:
     return ""
 
 
+def resolve(query: str) -> tuple[str | None, str | None]:
+    """KRX 명단에서 티커 또는 종목명으로 (ticker, name) 정규화. 없으면 (None, None).
+
+    corp 픽스처(DART) 밖이지만 거래소 명단에는 있는 종목(예: 오에스피)의 이름→티커
+    정규화용. 이름 입력이 티커 입력과 동일하게 동작하도록 파이프라인 입구에서 쓴다."""
+    q = query.strip()
+    for d in _load():
+        for r in d["rows"]:
+            if r["ticker"] == q or r.get("name", "").strip() == q:
+                return r["ticker"], r.get("name", "").strip() or r["ticker"]
+    return None, None
+
+
 def risk_flags(ticker: str) -> list[dict]:
     """종목의 층1 KRX 신호 목록. 지정 안 됐으면 빈 목록(존재의 정직 — 없으면 없다).
 

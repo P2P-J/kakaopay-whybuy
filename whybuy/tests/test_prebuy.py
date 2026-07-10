@@ -119,3 +119,32 @@ def test_golden_prebuy_kakao():
     md = rnd.render_prebuy(rs.build_prebuy("035720"))
     golden = open(os.path.join(os.path.dirname(__file__), "golden", "prebuy-035720.md"), encoding="utf-8").read()
     assert md == golden, "카카오 매수 전 점검 브리핑이 골든과 다름 (픽스처/템플릿 변경 시 아엔 승인 후 갱신)"
+
+
+# ── 이름 입력 == 티커 입력 (입구 정규화 보장, 픽스처 모드) ──
+def test_prebuy_name_input_equals_ticker_input():
+    """종목명으로 쳐도 티커와 완전히 동일한 브리핑(제목·확인가능한 사실 포함)이 나온다.
+
+    corp 픽스처 종목(DART): 카카오·KT&G / KRX 전용 종목: 오에스피. 셋 다 이름==티커."""
+    for name, tk in [("카카오", "035720"), ("오에스피", "368970"), ("케이티앤지", "033780")]:
+        by_name = rnd.render_prebuy(rs.build_prebuy(name))
+        by_ticker = rnd.render_prebuy(rs.build_prebuy(tk))
+        assert by_name == by_ticker, f"{name} 이름 입력이 {tk} 티커 입력과 다름"
+
+def test_prebuy_name_input_has_full_facts():
+    """이름 입력(카카오)에서도 확인 가능한 사실(감사의견·연속흑자·배당)이 빠지지 않는다."""
+    ctx = rs.build_prebuy("카카오")
+    assert ctx["dart_scope"] is True                          # 이름으로도 DART 범위 연결
+    assert ctx["corp_name"] == "(주)카카오" and ctx["ticker"] == "035720"   # 정식명·정식 티커로 정규화
+    assert ctx["facts"].get("profit_streak", 0) >= 4 and ctx["facts"].get("audit")
+
+def test_prebuy_name_input_krx_only_keeps_signals():
+    """KRX 전용 종목(오에스피)도 이름 입력에서 층1 신호가 유지된다(이름으로 쳤을 때만 빠지면 안 됨)."""
+    ctx = rs.build_prebuy("오에스피")
+    assert ctx["ticker"] == "368970" and ctx["has_signals"] is True
+    assert any(s["source_kind"] == "KRX" and s["label"] == "관리종목" for s in ctx["signals"])
+
+def test_resolve_corp_name_normalization():
+    import dart_client as dc
+    for q in ["카카오", "(주)카카오", "035720", "케이티앤지", "삼성전자"]:
+        assert dc.resolve_corp(q).get("status") != "absent", f"{q} 정규화 실패"

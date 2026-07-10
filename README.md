@@ -40,18 +40,18 @@ cd src
 python -m venv .venv && . .venv/bin/activate    # 또는: uv venv .venv
 pip install -r requirements.txt                  # 또는: uv pip install -r requirements.txt
 
-.venv/bin/python -m pytest -q                    # → 181 passed
+.venv/bin/python -m pytest -q                    # → 185 passed
 bash tools/run_all_contracts.sh                  # → 컨트랙트 3종 × 3케이스 전부 PASS
 .venv/bin/python tools/validate_fixtures.py      # 픽스처 스키마 검증
 .venv/bin/python tools/validate_ledger.py data/ledger/reasons.json
 ```
 
-저장소 밖 임시 폴더에 풀어 새 가상환경에서 **키 없이 `pytest` → 181 passed**, 컨트랙트 전부 PASS가 재현됨을 확인했다. 스킬을 실제로 돌려보는 단계별 안내는 **[HOW_TO_USE.md](HOW_TO_USE.md)** 를, 플러그인 설치·MCP 등록은 **[src/README.md](src/README.md)** 를 본다.
+저장소 밖 임시 폴더에 풀어 새 가상환경에서 **키 없이 `pytest` → 185 passed**, 컨트랙트 전부 PASS가 재현됨을 확인했다. 스킬을 실제로 돌려보는 단계별 안내는 **[HOW_TO_USE.md](HOW_TO_USE.md)** 를, 플러그인 설치·MCP 등록은 **[src/README.md](src/README.md)** 를 본다.
 
 ## 실로드 검증 — 부분 성공, 정직 고지
 
 - **MCP 서버 실연결 확인(아엔 로컬, 2026-07-10).** MCP 서버를 Codex CLI(v0.143.0)에 `codex mcp add`로 등록해 **도구 11종이 실제로 연결·인식됨**을 확인했다.
-- **플러그인 카탈로그 로드는 정적 검증으로 대체.** 플러그인 카탈로그 등록은 마켓플레이스 스냅샷 규격상 별도 작업이 필요해, 전체 테스트(181 passed) + 컨트랙트로 대체 검증했다. 실로드 스냅샷 이후 추가된 `prebuy-check`(4번째 스킬)·`krx_risk_flags`(11번째 도구)도 정적 검증으로 확인했다.
+- **플러그인 카탈로그 로드는 정적 검증으로 대체.** 플러그인 카탈로그 등록은 마켓플레이스 스냅샷 규격상 별도 작업이 필요해, 전체 테스트(185 passed) + 컨트랙트로 대체 검증했다. 실로드 스냅샷 이후 추가된 `prebuy-check`(4번째 스킬)·`krx_risk_flags`(11번째 도구)도 정적 검증으로 확인했다.
 - 되는 것은 됐다고, 정적 검증으로 대체한 것은 대체했다고 그대로 적는다. 과장하지 않는다 — 이것도 부재의 정직이다.
 
 ## 범위·한계
