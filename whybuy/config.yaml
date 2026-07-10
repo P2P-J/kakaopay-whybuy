@@ -21,3 +21,10 @@ verdict:               # 판정 룰 경계값 (verdict_engine, G5)
 
 timeline:              # 타임라인 표기 (buy-timeline, G6)
   move_display_cap: 10          # 급변일 표기 최대 건수 (초과분은 접음)
+
+prebuy:                # 매수 전 점검 (prebuy_check, G10) — 오탐 위험 축이라 기준값을 브리핑에 표기
+  consecutive_op_loss_quarters: 4   # 연속 영업손실 신호 기준 (4분기=1년. 2분기는 정상 회사도 흔해 오탐)
+  dilution_window_days: 365         # 잦은 증자·CB 집계 창 (최근 1년)
+  dilution_count_threshold: 3       # 창 내 희석 이벤트 이 건수 이상이면 신호 (정정·감자 제외)
+  major_change_threshold: 2         # 최대주주 변경 이 횟수 이상이면 신호
+  capital_impairment_basis: OFS     # 자본잠식은 별도재무제표(개별 법인) 기준 — CFS는 자회사 지분 섞여 왜곡
